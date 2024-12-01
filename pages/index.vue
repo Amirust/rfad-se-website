@@ -1,15 +1,31 @@
 <template>
   <div>
-    <h1 class="main h-screen"></h1>
+    <div class="flex flex-col w-screen h-screen bg-black">
+      <img
+        src="assets/images/main-background.jpg"
+        class="gradient"
+        alt="background"
+      />
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-.main {
-  background: image('assets/images/MainBg.jpg'),
-    linear-gradient(to bottom, hsl(0, 0, 0) 0%, hsl(0, 0, 0) 100%),
-    radial-gradient(circle, hsl(0, 0, 40, 0) 0%, rgba(40, 13, 5, 1) 100%),
-    hsl(40, 13, 5, 25%);
-  background-blend-mode: normal, normal, normal, normal;
+.gradient {
+  z-index: 100;
+  //-webkit-mask-image: linear-gradient(to top, transparent 2%, black 95%);
+  -webkit-mask-image: linear-gradient(to top, transparent 2%, black 100%),
+  radial-gradient(
+          circle,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 100%
+  ),;
+
+  //-webkit-mask-image: radial-gradient(circle, hsl(0, 0, 40, 0) 0%, rgba(40, 13, 5, 1) 100%);
+  //mask-image: radial-gradient(
+  //  circle,
+  //  hsl(0, 0, 40, 0) 0%,
+  //  rgba(40, 13, 5, 1) 100%
+  //);
 }
 </style>
