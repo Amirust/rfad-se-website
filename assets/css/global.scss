@@ -3,3 +3,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.icon {
+  @apply text-secondary;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    @apply text-primary;
+  }
+}

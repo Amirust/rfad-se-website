@@ -17,7 +17,7 @@
           href="/apple-touch-icon.svg"
         />
       </Head>
-      <Body>
+      <Body class="bg-black">
         <slot />
       </Body>
     </Html>

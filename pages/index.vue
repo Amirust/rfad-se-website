@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black">
+  <div>
     <div class="w-screen h-screen">
       <div
         class="background bg-no-repeat bg-center bg-cover absolute top-0 left-0 w-screen h-screen"
@@ -9,9 +9,9 @@
         <div
           class="flex flex-col w-full h-full justify-center mt-112 items-center"
         >
-          <div class="text-center text-primary font-serif">
+          <div class="text-center text-primary font-serif leading-[64px]">
             <h1 class="text-8xl font-black">Requiem For A Dream</h1>
-            <h2 class="text-5xl font-black">by Immersive Chicken</h2>
+            <h2 class="text-5xl font-light">by Immersive Chicken</h2>
           </div>
 
           <div class="text-primary w-[46rem] h-72 mt-6">
@@ -33,15 +33,26 @@
                   <div
                     class="flex flex-row text-secondary justify-around mx-24"
                   >
-                    <BoostyLogo class="w-8 h-8" />
-                    <DiscordLogo class="w-8 h-8" />
-                    <TelegramLogo class="w-8 h-8" />
-                    <VkLogo class="w-8 h-8" />
+                    <BoostyLogo class="w-8 h-8 icon" />
+                    <DiscordLogo class="w-8 h-8 icon" />
+                    <TelegramLogo class="w-8 h-8 icon" />
+                    <VkLogo class="w-8 h-8 icon" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-56 mb-10 mx-144 text-secondary">
+      <div class="flex flex-col gap-2.5">
+        <MainPageInfoHeader>
+          <span>Почему мы?</span>
+        </MainPageInfoHeader>
+        <div class="w-full h-132 flex flex-row gap-12">
+          <div class="w-[65%]"><WhyWeBigComponent /></div>
+          <div class="w-[35%]"><WhyWeBigComponent /></div>
         </div>
       </div>
     </div>
@@ -61,21 +72,30 @@
 .main-block {
   background-image: url('assets/images/main-block.svg');
   filter: drop-shadow(0 4px 200px rgba(255, 234, 191, 0.5));
+  transition: all 0.3s ease-in-out;
 }
 
 .govno {
   position: relative;
-}
+  transition: all 0.3s ease-in-out;
 
-.govno:before {
-  content: '';
-  width: calc(100% - 2rem);
-  height: calc(100% - 2rem);
-  position: absolute;
-  top: auto;
-  bottom: 1rem;
-  left: 1rem;
-  box-shadow: 0 0 0 2px #ffeabf;
+  &:hover {
+    transform: translateY(-0.3rem);
+    .main-block {
+      filter: drop-shadow(0 4px 200px rgba(191, 175, 143, 0.5));
+    }
+  }
+
+  &:before {
+    content: '';
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    position: absolute;
+    top: auto;
+    bottom: 1rem;
+    left: 1rem;
+    box-shadow: 0 0 0 2px #ffeabf;
+  }
 }
 
 .span-medium {
