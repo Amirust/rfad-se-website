@@ -7,11 +7,33 @@
       <div class="relative">
         <AppHeader class="pt-5 hidden md:flex" />
         <div
-          class="flex flex-col w-full h-full justify-center mt-52 md:mt-100 items-center"
+          class="flex flex-col w-full h-full justify-center mt-100 md:mt-100 items-center"
         >
           <div class="text-center text-primary font-serif leading-[64px]">
-            <h1 class="text-8xl font-black">Requiem For A Dream</h1>
-            <h2 class="text-5xl font-light">by Immersive Chicken</h2>
+            <h1 class="text-5xl md:text-8xl font-black">Requiem For A Dream</h1>
+            <h2 class="text-4xl md:text-5xl font-light">
+              by Immersive Chicken
+            </h2>
+          </div>
+
+          <PointIcon class="w-8 h-8 animate-bounce text-primary mt-80" />
+
+          <div class="mx-5 gap-6 flex flex-col md:hidden mt-10">
+            <div class="mt-12 text-xl text-secondary h-fit span-medium">
+              <span>RFAD SE</span> это сборка модификаций на базе моде
+              <span>Requiem</span> для <span>Skyrim: Special Edition</span>. Она
+              меняет множество аспектов оригинальной игры и хорошо дополняет
+              игровой мир. Сделайте путешествие по миру Скайрима более
+              <span>сложным</span>, <span>интересным</span> и
+              <span>захватывающим</span>!
+            </div>
+            <hr class="border-primary h-3" />
+            <div class="flex flex-row text-secondary justify-around md:mx-24">
+              <BoostyLogo class="w-8 h-8 icon" />
+              <DiscordLogo class="w-8 h-8 icon" />
+              <TelegramLogo class="w-8 h-8 icon" />
+              <VkLogo class="w-8 h-8 icon" />
+            </div>
           </div>
 
           <div class="text-primary w-[46rem] h-72 hidden md:block mt-6">
@@ -145,4 +167,5 @@ import BoostyLogo from 'assets/icons/BoostyLogo.vue'
 import DiscordLogo from 'assets/icons/DiscordLogo.vue'
 import TelegramLogo from 'assets/icons/TelegramLogo.vue'
 import VkLogo from 'assets/icons/VkLogo.vue'
+import PointIcon from 'assets/icons/PointIcon.vue'
 </script>
