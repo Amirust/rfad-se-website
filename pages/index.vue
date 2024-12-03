@@ -14,7 +14,7 @@
             <h2 class="text-5xl font-light">by Immersive Chicken</h2>
           </div>
 
-          <div class="text-primary w-[46rem] h-72 hidden md:block">
+          <div class="text-primary w-[46rem] h-72 hidden md:block mt-6">
             <div class="govno w-full h-full">
               <div
                 class="main-block text-primary bg-no-repeat bg-center bg-cover bg-transparent w-full h-full flex"
