@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex flex-row mx-132 justify-between font-header text-4xl items-center text-primary"
+    class="flex flex-row mx-132 justify-between font-header text-3xl items-center text-primary"
   >
-    <div class="w-72 text-center">СКАЧАТЬ</div>
-    <div><AppLogo class="h-24" /></div>
-    <div class="w-72 text-center">БАЗА ЗНАНИЙ</div>
+    <div class="w-72 text-center clickable">СКАЧАТЬ</div>
+    <div><AppLogo class="h-16" /></div>
+    <div class="w-72 text-center clickable">БАЗА ЗНАНИЙ</div>
   </div>
 </template>
 

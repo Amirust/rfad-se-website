@@ -7,7 +7,7 @@
       <div class="relative">
         <AppHeader class="pt-5" />
         <div
-          class="flex flex-col w-full h-full justify-center mt-112 items-center"
+          class="flex flex-col w-full h-full justify-center mt-100 items-center"
         >
           <div class="text-center text-primary font-serif leading-[64px]">
             <h1 class="text-8xl font-black">Requiem For A Dream</h1>
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-56 mb-10 mx-144 text-secondary">
+    <div class="mt-56 mb-10 mx-120 text-secondary">
       <div class="flex flex-col gap-2.5">
         <MainPageInfoHeader>
           <span>Почему мы?</span>
@@ -55,6 +55,7 @@
           <div class="w-[35%]"><WhyWeSmallComponent /></div>
         </div>
       </div>
+      <h1 class="text-center text-3xl mt-16 mb-56">Тут ещё будет говно</h1>
     </div>
   </div>
 </template>

@@ -5,16 +5,22 @@
         <div
           class="text-primary flex flex-row mt-auto items-center text-2xl gap-6"
         >
-          <VerminaDaedraIcon class="w-16 h-16" />
+          <VerminaDaedraIcon class="max-w-10 h-max" />
           <div>
             <h1 class="text-2xl">Новый контент</h1>
             <h4 class="text-base text-secondary">
               Новые расы, данжи, броня, оружие, заклинания, мини/боссы, данжи,
+              <InfoIcon
+                class="inline-block hide-on-hover w-4 h-4 text-primary align-middle"
+              />
             </h4>
           </div>
         </div>
-        <div>
-          <h4 class="only-on-hover text-base text-secondary ml-[62px]">
+        <div
+          class="only-on-hover text-primary flex flex-row items-center text-2xl gap-6"
+        >
+          <VerminaDaedraIcon class="max-w-10 opacity-0 h-max" />
+          <h4 class="text-base text-secondary">
             крики, способности, квесты, глобальные локации, переработанная
             алхимия и много всего другого, созданного нашей командой!
           </h4>
@@ -40,12 +46,13 @@
   transition: filter 0.3s ease-in-out;
 
   &:hover {
-    filter: drop-shadow(0 4px 50px rgba(191, 175, 143, 0.15));
-
     .only-on-hover {
       max-height: 230px;
       transform: scaleY(1);
       opacity: 1;
+    }
+    .hide-on-hover {
+      opacity: 0;
     }
   }
 }
@@ -61,7 +68,12 @@
     transform 0.5s ease,
     opacity 0.5s ease;
 }
+
+.hide-on-hover {
+  transition: opacity 0.3s ease;
+}
 </style>
 <script setup lang="ts">
 import VerminaDaedraIcon from 'assets/icons/VerminaDaedraIcon.vue'
+import InfoIcon from 'assets/icons/InfoIcon.vue'
 </script>
