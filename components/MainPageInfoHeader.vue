@@ -19,14 +19,14 @@ import DiamondIcon from 'assets/icons/DiamondIcon.vue'
     content: '';
     position: absolute;
     top: 50%;
-    border-width: 2px;
+    border-width: 1px;
     @apply border-primary w-full;
   }
   &:after {
     content: '';
     position: absolute;
-    top: 51%;
-    right: 0;
+    top: 53%;
+    right: 1px;
     transform: translateY(-50%) rotate(45deg);
     width: 7px;
     height: 7px;
