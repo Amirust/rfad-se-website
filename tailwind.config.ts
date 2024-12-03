@@ -11,6 +11,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1860px',
+        // => @media (min-width: 1860px) { ... }
+      },
       spacing: {
         18: '4.5rem',
         26: '6.5rem',

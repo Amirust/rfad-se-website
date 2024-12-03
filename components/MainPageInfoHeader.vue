@@ -4,7 +4,7 @@ import DiamondIcon from 'assets/icons/DiamondIcon.vue'
 
 <template>
   <div class="flex flex-row gap-2.5 text-primary items-center">
-    <DiamondIcon class="w-9 h-9" />
+    <DiamondIcon class="w-7 h-9" />
     <span class="font-sans text-3xl min-w-max"><slot /></span>
     <hr class="border-primary styled-hr w-full h-12" />
   </div>

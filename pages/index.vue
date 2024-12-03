@@ -1,25 +1,25 @@
 <template>
   <div>
-    <div class="w-screen h-screen">
+    <div class="w-svw h-svw">
       <div
-        class="background bg-no-repeat bg-center bg-cover absolute top-0 left-0 w-screen h-screen"
+        class="background bg-no-repeat bg-center bg-cover absolute top-0 left-0 w-full h-full"
       ></div>
       <div class="relative">
-        <AppHeader class="pt-5" />
+        <AppHeader class="pt-5 hidden md:flex" />
         <div
-          class="flex flex-col w-full h-full justify-center mt-100 items-center"
+          class="flex flex-col w-full h-full justify-center mt-52 md:mt-100 items-center"
         >
           <div class="text-center text-primary font-serif leading-[64px]">
             <h1 class="text-8xl font-black">Requiem For A Dream</h1>
             <h2 class="text-5xl font-light">by Immersive Chicken</h2>
           </div>
 
-          <div class="text-primary w-[46rem] h-72 mt-6">
+          <div class="text-primary w-[46rem] h-72 hidden md:block">
             <div class="govno w-full h-full">
               <div
                 class="main-block text-primary bg-no-repeat bg-center bg-cover bg-transparent w-full h-full flex"
               >
-                <div class="mx-18 gap-6 flex flex-col">
+                <div class="mx-10 md:mx-18 gap-6 flex flex-col">
                   <div class="mt-12 text-xl text-secondary h-fit span-medium">
                     <span>RFAD SE</span> это сборка модификаций на базе моде
                     <span>Requiem</span> для
@@ -31,7 +31,7 @@
                   </div>
                   <hr class="border-primary h-3" />
                   <div
-                    class="flex flex-row text-secondary justify-around mx-24"
+                    class="flex flex-row text-secondary justify-around md:mx-24"
                   >
                     <BoostyLogo class="w-8 h-8 icon" />
                     <DiscordLogo class="w-8 h-8 icon" />
@@ -45,14 +45,16 @@
         </div>
       </div>
     </div>
-    <div class="mt-56 mb-10 mx-120 text-secondary">
+    <div
+      class="mt-56 mx-5 md:mx-24 lg:mx-40 xl:mx-80 2xl:mx-100 3xl:mx-120 text-secondary"
+    >
       <div class="flex flex-col gap-2.5">
         <MainPageInfoHeader>
           <span>Почему мы?</span>
         </MainPageInfoHeader>
-        <div class="w-full h-144 flex flex-row gap-12">
-          <div class="w-[65%]"><WhyWeBigComponent /></div>
-          <div class="w-[35%]"><WhyWeSmallComponent /></div>
+        <div class="w-full h-144 flex flex-col md:flex-row gap-12">
+          <div class="md:w-[65%] h-full"><WhyWeBigComponent /></div>
+          <div class="md:w-[35%] h-full"><WhyWeSmallComponent /></div>
         </div>
       </div>
       <h1 class="text-center text-3xl mt-16 mb-56">Тут ещё будет говно</h1>
@@ -81,7 +83,7 @@
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    transform: translateY(-0.3rem);
+    transform: translateY(-0.1rem);
     .main-block {
       filter: drop-shadow(0 4px 200px rgba(191, 175, 143, 0.5));
     }
