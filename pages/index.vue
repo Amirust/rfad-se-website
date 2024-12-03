@@ -50,9 +50,9 @@
         <MainPageInfoHeader>
           <span>Почему мы?</span>
         </MainPageInfoHeader>
-        <div class="w-full h-132 flex flex-row gap-12">
+        <div class="w-full h-144 flex flex-row gap-12">
           <div class="w-[65%]"><WhyWeBigComponent /></div>
-          <div class="w-[35%]"><WhyWeBigComponent /></div>
+          <div class="w-[35%]"><WhyWeSmallComponent /></div>
         </div>
       </div>
     </div>
