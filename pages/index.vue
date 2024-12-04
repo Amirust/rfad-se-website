@@ -70,7 +70,7 @@
       </div>
     </div>
     <div
-      class="mt-56 mx-5 md:mx-24 lg:mx-40 xl:mx-80 2xl:mx-100 3xl:mx-120 text-secondary"
+      class="mt-56 mx-5 md:mx-24 lg:mx-40 xl:mx-80 2xl:mx-100 3xl:mx-120 text-secondary flex flex-col gap-20"
     >
       <div class="flex flex-col gap-2.5">
         <MainPageInfoHeader>
@@ -81,7 +81,7 @@
           <div class="md:w-[35%] h-full"><WhyWeSmallComponent /></div>
         </div>
       </div>
-      <div class="flex flex-col gap-2.5 mt-12">
+      <div class="flex flex-col gap-2.5">
         <MainPageInfoHeader>
           <span>А что с графикой?</span>
         </MainPageInfoHeader>
@@ -103,6 +103,12 @@
             />
           </div>
         </div>
+      </div>
+      <div class="flex flex-col gap-2.5">
+        <MainPageTwoSidesHeader>
+          <span>Скачать</span>
+        </MainPageTwoSidesHeader>
+        <DownloadStepper />
       </div>
       <h1 class="text-center text-3xl mt-16 mb-56">Тут ещё будет говно</h1>
     </div>
@@ -193,4 +199,5 @@ import DiscordLogo from '~/components/icons/DiscordLogo.vue'
 import TelegramLogo from '~/components/icons/TelegramLogo.vue'
 import VkLogo from '~/components/icons/VkLogo.vue'
 import PointIcon from '~/components/icons/PointIcon.vue'
+import MainPageTwoSidesHeader from '~/components/MainPageTwoSidesHeader.vue'
 </script>
