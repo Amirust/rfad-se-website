@@ -16,7 +16,9 @@
             </h2>
           </div>
 
-          <PointIcon class="w-8 h-8 animate-bounce text-primary mt-80" />
+          <PointIcon
+            class="w-8 h-8 animate-bounce text-primary mt-80 md:hidden"
+          />
 
           <div class="mx-5 gap-6 flex flex-col md:hidden mt-10">
             <div class="mt-12 text-xl text-secondary h-fit span-medium">
@@ -77,6 +79,29 @@
         <div class="w-full h-144 flex flex-col md:flex-row gap-12">
           <div class="md:w-[65%] h-full"><WhyWeBigComponent /></div>
           <div class="md:w-[35%] h-full"><WhyWeSmallComponent /></div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2.5 mt-12">
+        <MainPageInfoHeader>
+          <span>А что с графикой?</span>
+        </MainPageInfoHeader>
+        <div class="w-full h-144 flex flex-col md:flex-row gap-12">
+          <div class="md:w-[50%] h-full">
+            <GraphicsShowcaseComponent
+              icon="city"
+              title="Графика с ENB"
+              :description="'GTX 1660 (6 GB) & 4-Ядерный CPU\n1080p 60FPS - Medium/High BetIni'"
+              background="enb"
+            />
+          </div>
+          <div class="md:w-[50%] h-full">
+            <GraphicsShowcaseComponent
+              icon="village"
+              title="Графика с ReShade"
+              :description="'GTX 1060 (6 GB) & 4-Ядерный CPU\n1080p 60FPS - Medium/High BetIni'"
+              background="reshade"
+            />
+          </div>
         </div>
       </div>
       <h1 class="text-center text-3xl mt-16 mb-56">Тут ещё будет говно</h1>
@@ -163,9 +188,9 @@
 }
 </style>
 <script setup lang="ts">
-import BoostyLogo from 'assets/icons/BoostyLogo.vue'
-import DiscordLogo from 'assets/icons/DiscordLogo.vue'
-import TelegramLogo from 'assets/icons/TelegramLogo.vue'
-import VkLogo from 'assets/icons/VkLogo.vue'
-import PointIcon from 'assets/icons/PointIcon.vue'
+import BoostyLogo from '~/components/icons/BoostyLogo.vue'
+import DiscordLogo from '~/components/icons/DiscordLogo.vue'
+import TelegramLogo from '~/components/icons/TelegramLogo.vue'
+import VkLogo from '~/components/icons/VkLogo.vue'
+import PointIcon from '~/components/icons/PointIcon.vue'
 </script>

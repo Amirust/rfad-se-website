@@ -74,6 +74,6 @@
 }
 </style>
 <script setup lang="ts">
-import VerminaDaedraIcon from 'assets/icons/VerminaDaedraIcon.vue'
-import InfoIcon from 'assets/icons/InfoIcon.vue'
+import VerminaDaedraIcon from '~/components/icons/VerminaDaedraIcon.vue'
+import InfoIcon from '~/components/icons/InfoIcon.vue'
 </script>

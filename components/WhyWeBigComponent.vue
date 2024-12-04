@@ -29,5 +29,5 @@
 }
 </style>
 <script setup lang="ts">
-import SkyrimDragonIcon from 'assets/icons/SkyrimDragonIcon.vue'
+import SkyrimDragonIcon from '~/components/icons/SkyrimDragonIcon.vue'
 </script>

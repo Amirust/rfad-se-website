@@ -42,7 +42,7 @@ export default {
       fontFamily: {
         sans: ['Amrys', 'sans-serif'],
         serif: ['Sovngarde', 'serif'],
-        header: ['Cormorant Infant', 'serif'],
+        header: ['Typey', 'serif'],
       },
       colors: {
         primary: '#FFEABF',
