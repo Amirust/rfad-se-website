@@ -91,7 +91,7 @@
               icon="city"
               title="Графика с ENB"
               :description="'GTX 1660 (6 GB) & 4-Ядерный CPU\n1080p 60FPS - Medium/High BetIni'"
-              background="enb"
+              background-type="enb"
             />
           </div>
           <div class="md:w-[50%] h-full">
@@ -99,7 +99,7 @@
               icon="village"
               title="Графика с ReShade"
               :description="'GTX 1060 (6 GB) & 4-Ядерный CPU\n1080p 60FPS - Medium/High BetIni'"
-              background="reshade"
+              background-type="reshade"
             />
           </div>
         </div>

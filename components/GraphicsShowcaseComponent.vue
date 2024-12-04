@@ -1,8 +1,8 @@
 <template>
   <div
     :class="{
-      'component-background-enb': props.background === 'enb',
-      'component-background-reshade': props.background === 'reshade',
+      'component-background-enb': props.backgroundType === 'enb',
+      'component-background-reshade': props.backgroundType === 'reshade',
     }"
     class="w-full h-full component-background bg-no-repeat bg-center bg-cover"
   >
