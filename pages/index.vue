@@ -90,7 +90,7 @@
             <GraphicsShowcaseComponent
               icon="city"
               title="Графика с ENB"
-              :description="'GTX 1660 (6 GB) & 4-Ядерный CPU\n1080p 60FPS - Medium/High BetIni'"
+              :description="'RTX 2060 (6 GB) & 4-Ядерный CPU\n1080p 60FPS - Medium/High BetIni'"
               background-type="enb"
             />
           </div>
