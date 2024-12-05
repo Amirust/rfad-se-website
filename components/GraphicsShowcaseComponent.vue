@@ -32,7 +32,7 @@
         rgba(0, 0, 0, 0.72) 85%,
         rgba(0, 0, 0, 1) 100%
       ),
-      url('assets/images/main-background.webp');
+      url('assets/images/enb.webp');
   }
 
   &-reshade {
@@ -42,7 +42,7 @@
         rgba(0, 0, 0, 0.72) 85%,
         rgba(0, 0, 0, 1) 100%
       ),
-      url('assets/images/main-background.webp');
+      url('assets/images/reshade.webp');
   }
 }
 </style>
