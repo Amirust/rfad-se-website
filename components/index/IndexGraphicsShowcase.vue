@@ -7,8 +7,8 @@
     <MainPageInfoHeader>
       <span>А что с графикой?</span>
     </MainPageInfoHeader>
-    <div class="w-full h-144 flex flex-col md:flex-row gap-12">
-      <div class="md:w-[50%] h-full">
+    <div class="w-full h-full md:h-144 flex flex-col md:flex-row gap-12">
+      <div class="md:w-[50%] h-80 md:h-full">
         <GraphicsShowcaseComponent
           icon="city"
           title="Графика с ENB"
@@ -16,7 +16,7 @@
           background-type="enb"
         />
       </div>
-      <div class="md:w-[50%] h-full">
+      <div class="md:w-[50%] h-80 md:h-full">
         <GraphicsShowcaseComponent
           icon="village"
           title="Графика с ReShade"

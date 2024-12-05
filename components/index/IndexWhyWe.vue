@@ -7,9 +7,9 @@
     <MainPageInfoHeader>
       <span>Почему мы?</span>
     </MainPageInfoHeader>
-    <div class="w-full h-144 flex flex-col md:flex-row gap-12">
-      <div class="md:w-[65%] h-full"><WhyWeBigComponent /></div>
-      <div class="md:w-[35%] h-full"><WhyWeSmallComponent /></div>
+    <div class="w-full h-full md:h-144 flex flex-col md:flex-row gap-12">
+      <div class="md:w-[65%] h-80 md:h-full"><WhyWeBigComponent /></div>
+      <div class="md:w-[35%] h-80 md:h-full"><WhyWeSmallComponent /></div>
     </div>
   </div>
 </template>

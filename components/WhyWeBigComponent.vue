@@ -25,7 +25,7 @@
       rgba(0, 0, 0, 0.72) 85%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url('assets/images/why-we-fate-routes.png');
+    url('assets/images/why-we-fate-routes.webp');
 }
 </style>
 <script setup lang="ts">

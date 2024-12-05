@@ -29,7 +29,7 @@
       rgba(0, 0, 0, 0.72) 85%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url('assets/images/knowledge-background.jpg');
+    url('assets/images/knowledge-background.webp');
 }
 
 .highlight-link a {

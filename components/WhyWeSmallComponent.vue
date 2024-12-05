@@ -1,6 +1,8 @@
 <template>
   <div class="w-full h-full show-text-on-hover">
-    <div class="w-full h-full component-background bg-no-repeat bg-cover">
+    <div
+      class="w-full h-full component-background bg-no-repeat bg-left bg-cover"
+    >
       <div class="flex h-full w-full flex-col">
         <div
           class="text-primary flex flex-row mt-auto items-center text-2xl gap-6"
@@ -38,7 +40,7 @@
       rgba(0, 0, 0, 0.72) 85%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url('assets/images/why-we-fate-routes.png');
+    url('assets/images/why-we-second.webp');
 }
 
 .show-text-on-hover {
