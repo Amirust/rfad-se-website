@@ -99,13 +99,6 @@
 }
 </style>
 <script setup lang="ts">
-import BoostyLogo from '~/components/icons/BoostyLogo.vue'
-import DiscordLogo from '~/components/icons/DiscordLogo.vue'
-import TelegramLogo from '~/components/icons/TelegramLogo.vue'
-import VkLogo from '~/components/icons/VkLogo.vue'
-import PointIcon from '~/components/icons/PointIcon.vue'
-import MainPageTwoSidesHeader from '~/components/MainPageTwoSidesHeader.vue'
-import config from '~/config'
 import TitleComponent from '~/components/index/IndexTitle.vue'
 import WhyWeComponent from '~/components/index/IndexWhyWe.vue'
 import IndexAdditionalMaterials from '~/components/index/IndexAdditionalMaterials.vue'
