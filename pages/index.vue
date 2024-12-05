@@ -6,111 +6,16 @@
       ></div>
       <div class="relative">
         <AppHeader class="pt-5 hidden md:flex" />
-        <div
-          class="flex flex-col w-full h-full justify-center mt-100 md:mt-100 items-center"
-        >
-          <div class="text-center text-primary font-serif leading-[64px]">
-            <h1 class="text-5xl md:text-8xl font-black">Requiem For A Dream</h1>
-            <h2 class="text-4xl md:text-5xl font-light">
-              by Immersive Chicken
-            </h2>
-          </div>
-
-          <PointIcon
-            class="w-8 h-8 animate-bounce text-primary mt-80 md:hidden"
-          />
-
-          <div class="mx-5 gap-6 flex flex-col md:hidden mt-10">
-            <div class="mt-12 text-xl text-secondary h-fit span-medium">
-              <span>RFAD SE</span> это сборка модификаций на базе моде
-              <span>Requiem</span> для <span>Skyrim: Special Edition</span>. Она
-              меняет множество аспектов оригинальной игры и хорошо дополняет
-              игровой мир. Сделайте путешествие по миру Скайрима более
-              <span>сложным</span>, <span>интересным</span> и
-              <span>захватывающим</span>!
-            </div>
-            <hr class="border-primary h-3" />
-            <div class="flex flex-row text-secondary justify-around md:mx-24">
-              <BoostyLogo class="w-8 h-8 icon" />
-              <DiscordLogo class="w-8 h-8 icon" />
-              <TelegramLogo class="w-8 h-8 icon" />
-              <VkLogo class="w-8 h-8 icon" />
-            </div>
-          </div>
-
-          <div class="text-primary w-[46rem] h-72 hidden md:block mt-6">
-            <div class="govno w-full h-full">
-              <div
-                class="main-block text-primary bg-no-repeat bg-center bg-cover bg-transparent w-full h-full flex"
-              >
-                <div class="mx-10 md:mx-18 gap-6 flex flex-col">
-                  <div class="mt-12 text-xl text-secondary h-fit span-medium">
-                    <span>RFAD SE</span> это сборка модификаций на базе моде
-                    <span>Requiem</span> для
-                    <span>Skyrim: Special Edition</span>. Она меняет множество
-                    аспектов оригинальной игры и хорошо дополняет игровой мир.
-                    Сделайте путешествие по миру Скайрима более
-                    <span>сложным</span>, <span>интересным</span> и
-                    <span>захватывающим</span>!
-                  </div>
-                  <hr class="border-primary h-3" />
-                  <div
-                    class="flex flex-row text-secondary justify-around md:mx-24"
-                  >
-                    <BoostyLogo class="w-8 h-8 icon" />
-                    <DiscordLogo class="w-8 h-8 icon" />
-                    <TelegramLogo class="w-8 h-8 icon" />
-                    <VkLogo class="w-8 h-8 icon" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <TitleComponent />
       </div>
     </div>
     <div
-      class="mt-56 mx-5 md:mx-24 lg:mx-40 xl:mx-80 2xl:mx-100 3xl:mx-120 text-secondary flex flex-col gap-20"
+      class="mt-56 mb-24 mx-5 md:mx-24 lg:mx-40 xl:mx-80 2xl:mx-100 3xl:mx-120 text-secondary flex flex-col gap-20"
     >
-      <div class="flex flex-col gap-2.5">
-        <MainPageInfoHeader>
-          <span>Почему мы?</span>
-        </MainPageInfoHeader>
-        <div class="w-full h-144 flex flex-col md:flex-row gap-12">
-          <div class="md:w-[65%] h-full"><WhyWeBigComponent /></div>
-          <div class="md:w-[35%] h-full"><WhyWeSmallComponent /></div>
-        </div>
-      </div>
-      <div class="flex flex-col gap-2.5">
-        <MainPageInfoHeader>
-          <span>А что с графикой?</span>
-        </MainPageInfoHeader>
-        <div class="w-full h-144 flex flex-col md:flex-row gap-12">
-          <div class="md:w-[50%] h-full">
-            <GraphicsShowcaseComponent
-              icon="city"
-              title="Графика с ENB"
-              :description="'RTX 2060 (6 GB) & 4-Ядерный CPU\n1080p 60FPS - Medium/High BetIni'"
-              background-type="enb"
-            />
-          </div>
-          <div class="md:w-[50%] h-full">
-            <GraphicsShowcaseComponent
-              icon="village"
-              title="Графика с ReShade"
-              :description="'GTX 1060 (6 GB) & 4-Ядерный CPU\n1080p 60FPS - Medium/High BetIni'"
-              background-type="reshade"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col gap-2.5">
-        <MainPageTwoSidesHeader>
-          <span>Скачать</span>
-        </MainPageTwoSidesHeader>
-        <DownloadStepper />
-      </div>
-      <h1 class="text-center text-3xl mt-16 mb-56">Тут ещё будет говно</h1>
+      <WhyWeComponent />
+      <IndexGraphicsShowcase />
+      <IndexDownload />
+      <IndexAdditionalMaterials />
     </div>
   </div>
 </template>
@@ -200,4 +105,8 @@ import TelegramLogo from '~/components/icons/TelegramLogo.vue'
 import VkLogo from '~/components/icons/VkLogo.vue'
 import PointIcon from '~/components/icons/PointIcon.vue'
 import MainPageTwoSidesHeader from '~/components/MainPageTwoSidesHeader.vue'
+import config from '~/config'
+import TitleComponent from '~/components/index/IndexTitle.vue'
+import WhyWeComponent from '~/components/index/IndexWhyWe.vue'
+import IndexAdditionalMaterials from '~/components/index/IndexAdditionalMaterials.vue'
 </script>

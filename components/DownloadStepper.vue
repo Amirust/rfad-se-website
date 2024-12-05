@@ -13,13 +13,13 @@
 </template>
 
 <style scoped lang="scss">
-.highlight-span a {
+.highlight-link a {
   @apply text-primary;
 }
 </style>
 <script setup lang="ts">
 import PointIcon from '~/components/icons/PointIcon.vue'
-import DownloadStepperPart1 from '~/components/DownloadStepperParts/DownloadStepperPart1.vue'
-import DownloadStepperPart2 from '~/components/DownloadStepperParts/DownloadStepperPart2.vue'
-import DownloadStepperPart3 from '~/components/DownloadStepperParts/DownloadStepperPart3.vue'
+import DownloadStepperPart1 from '~/components/download-stepper-parts/DownloadStepperPart1.vue'
+import DownloadStepperPart2 from '~/components/download-stepper-parts/DownloadStepperPart2.vue'
+import DownloadStepperPart3 from '~/components/download-stepper-parts/DownloadStepperPart3.vue'
 </script>

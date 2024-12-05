@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply scroll-smooth;
+}
+
 .icon {
   @apply text-secondary;
   transition: color 0.2s ease-in-out;
