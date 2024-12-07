@@ -46,7 +46,7 @@
       <div
         class="text-primary flex flex-row mt-auto items-center text-2xl gap-6 mx-3"
       >
-        <VillageIcon class="w-16 h-16" />
+        <VillageIcon class="w-20 h-20" />
         <div>
           <h1 class="text-2xl">Наши Соц. Сети</h1>
           <h4 class="text-base text-secondary highlight-link">
