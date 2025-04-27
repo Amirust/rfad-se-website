@@ -11,10 +11,6 @@ export default {
   ],
   theme: {
     extend: {
-      screens: {
-        '3xl': '1860px',
-        // => @media (min-width: 1860px) { ... }
-      },
       spacing: {
         18: '4.5rem',
         26: '6.5rem',
@@ -40,14 +36,17 @@ export default {
         168: '47.5rem',
       },
       fontFamily: {
-        sans: ['Amrys', 'sans-serif'],
-        serif: ['Sovngarde', 'serif'],
-        header: ['Typey', 'serif'],
+        sans: ['Futura', 'sans-serif'],
       },
       colors: {
         primary: '#FFEABF',
         secondary: '#BFAF8F',
-        block: '#0D0C0A',
+        block: '#1A1816',
+        'block-border': '#333333',
+        'block-inner-text': '#E8D6B1',
+        'white-transparent': 'rgba(255,255,255,0.75)',
+        'brand-white': '#DBDBDB',
+        'tile-border': '#202020',
       },
     },
   },

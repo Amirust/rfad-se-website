@@ -7,22 +7,3 @@
 html {
   @apply scroll-smooth;
 }
-
-.icon {
-  @apply text-secondary;
-  transition: color 0.2s ease-in-out;
-
-  &:hover {
-    cursor: pointer;
-    @apply text-primary;
-  }
-}
-
-.clickable {
-    transition: color 0.2s ease-in-out;
-
-    &:hover {
-        cursor: pointer;
-        @apply text-secondary;
-    }
-}

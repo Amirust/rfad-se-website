@@ -1,105 +1,119 @@
 <template>
   <div>
-    <div class="w-svw h-svw">
-      <div
-        class="background bg-no-repeat bg-center bg-cover absolute top-0 left-0 w-full h-full"
-      ></div>
-      <div class="relative">
-        <AppHeader class="pt-5 hidden md:flex" />
-        <TitleComponent />
+    <div class="bg text-white">
+      <NavBar />
+      <div class="container mx-auto flex flex-col gap-1.5 my-96">
+        <div class="font-semibold rfad-styled-text-gradient">
+          <div class="text-6xl">Requiem For A Dream</div>
+          <div class="text-3xl ml-[3px] mt-[-0.3rem] tracking-wide">
+            by Immersive Chicken
+          </div>
+        </div>
+        <div class="text-brand-white font-semibold text-xl max-w-120">
+          RFAD SE — это передовая и технологичная Skyrim сборка на основе
+          глобального мода Requiem.
+        </div>
+        <div class="flex flex-row gap-5 mt-3.5">
+          <Button to="/download">Узнать больше</Button>
+          <Button to="/download">Скачать</Button>
+        </div>
+      </div>
+      <div class="opacity-0">Text for normal margin =) Hello</div>
+    </div>
+    <div class="container mx-auto my-26 flex flex-col gap-8">
+      <div class="rfad-styled-text-gradient text-3xl font-semibold">
+        Новое виденье Скайрима
+      </div>
+      <div class="tiles w-full">
+        <WhyWeTile class="weapons-bg">Новое оружие</WhyWeTile>
+        <WhyWeTile class="bosses-bg">Новые боссы</WhyWeTile>
+        <WhyWeTile wide class="features-bg"> Новые механики </WhyWeTile>
+        <WhyWeTile wide class="graphics-bg">Новая графика</WhyWeTile>
+        <WhyWeTile class="locations-bg">Новые локации</WhyWeTile>
+        <WhyWeTile class="rpg-bg"> Реворк RPG системы </WhyWeTile>
       </div>
     </div>
-    <div
-      class="mt-56 mb-24 mx-5 md:mx-24 lg:mx-40 xl:mx-80 2xl:mx-100 3xl:mx-120 text-secondary flex flex-col gap-20"
-    >
-      <WhyWeComponent />
-      <IndexGraphicsShowcase />
-      <IndexDownload />
-      <IndexAdditionalMaterials />
+    <div class="container mx-auto my-26 flex flex-col gap-8">
+      <div class="rfad-styled-text-gradient text-3xl font-semibold">
+        Новое виденье Скайрима
+      </div>
+      <div class="tiles w-full">
+        <WhyWeTile class="weapons-bg">Новое оружие</WhyWeTile>
+        <WhyWeTile class="bosses-bg">Новые боссы</WhyWeTile>
+        <WhyWeTile wide class="features-bg"> Новые механики </WhyWeTile>
+        <WhyWeTile wide class="graphics-bg">Новая графика</WhyWeTile>
+        <WhyWeTile class="locations-bg">Новые локации</WhyWeTile>
+        <WhyWeTile class="rpg-bg"> Реворк RPG системы </WhyWeTile>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss">
-.background {
-  background-image: url('assets/images/main-background.webp');
-  mask-image: radial-gradient(
-    circle at 50%,
-    rgba(102, 102, 102, 1) 0%,
-    rgba(0, 0, 0, 0) 85%
-  );
+.bg {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 90%,
+      black 100%
+    ),
+    url('assets/images/MainBG.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.main-block {
-  background-image: url('assets/images/main-block.svg');
-  filter: drop-shadow(0 4px 200px rgba(255, 234, 191, 0.5));
-  transition: all 0.3s ease-in-out;
+.rfad-styled-text-gradient {
+  background: linear-gradient(
+      173.737deg,
+      rgba(13, 12, 10, 0%) 0%,
+      #9d7f6d 100%
+    ),
+    linear-gradient(#ffeabf, #ffeabf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
-.govno {
-  position: relative;
-  transition: all 0.3s ease-in-out;
+$gap: 24px;
 
-  &:hover {
-    transform: translateY(-0.1rem);
-    .main-block {
-      filter: drop-shadow(0 4px 200px rgba(191, 175, 143, 0.5));
-    }
-  }
-
-  &:before {
-    content: '';
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
-    position: absolute;
-    top: auto;
-    bottom: 1rem;
-    left: 1rem;
-    box-shadow: 0 0 0 2px #ffeabf;
-  }
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
 }
 
-.span-medium {
-  span {
-    @apply font-medium text-primary;
-  }
+.tiles > * {
+  flex: 0 0 calc((75% - 2 * #{$gap}) / 3);
 }
 
-@screen sm {
-  // Mobile
-  .background {
-    mask-image: radial-gradient(
-      circle at 50%,
-      rgba(102, 102, 102, 1) 0%,
-      rgba(0, 0, 0, 0) 90%
-    );
-  }
+.tiles > .wide {
+  flex: 0 0 calc(2 * ((50% - 2 * #{$gap}) / 2) + #{$gap});
 }
 
-@screen md {
-  // Tablet
-  .background {
-    mask-image: radial-gradient(
-      circle at 50%,
-      rgba(102, 102, 102, 1) 0%,
-      rgba(0, 0, 0, 0) 95%
-    );
-  }
+/* бэкграунды */
+.weapons-bg {
+  background-image: url('assets/images/NewWeapons.webp');
 }
-
-@screen lg {
-  // Desktop
-  .background {
-    mask-image: radial-gradient(
-      circle at 50%,
-      rgba(102, 102, 102, 1) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-  }
+.bosses-bg {
+  background-image: url('assets/images/NewBosses.webp');
+}
+.features-bg {
+  background-image: url('assets/images/NewFeatures.webp');
+}
+.graphics-bg {
+  background-image: url('assets/images/NewGraphics.webp');
+}
+.locations-bg {
+  background-image: url('assets/images/NewLocations.webp');
+}
+.rpg-bg {
+  background-image: url('assets/images/RPGRework.webp');
 }
 </style>
+
 <script setup lang="ts">
-import TitleComponent from '~/components/index/IndexTitle.vue'
-import WhyWeComponent from '~/components/index/IndexWhyWe.vue'
-import IndexAdditionalMaterials from '~/components/index/IndexAdditionalMaterials.vue'
+import NavBar from '~/components/NavBar.vue'
+import Button from '~/components/Button.vue'
+import WhyWeTile from '~/components/WhyWeTile.vue'
 </script>
