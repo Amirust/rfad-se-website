@@ -20,34 +20,47 @@
       </div>
       <div class="opacity-0">Text for normal margin =) Hello</div>
     </div>
+
     <div class="container mx-auto my-26 flex flex-col gap-8">
       <div class="rfad-styled-text-gradient text-3xl font-semibold">
         Новое виденье Скайрима
       </div>
-      <div class="tiles w-full">
-        <WhyWeTile class="weapons-bg">Новое оружие</WhyWeTile>
-        <WhyWeTile class="bosses-bg">Новые боссы</WhyWeTile>
-        <WhyWeTile wide class="features-bg"> Новые механики </WhyWeTile>
-        <WhyWeTile wide class="graphics-bg">Новая графика</WhyWeTile>
-        <WhyWeTile class="locations-bg">Новые локации</WhyWeTile>
-        <WhyWeTile class="rpg-bg"> Реворк RPG системы </WhyWeTile>
+      <div class="features-tiles w-full">
+        <NewFeaturesTile class="weapons-bg">Новое оружие</NewFeaturesTile>
+        <NewFeaturesTile class="bosses-bg">Новые боссы</NewFeaturesTile>
+        <NewFeaturesTile wide class="features-bg">
+          Новые механики
+        </NewFeaturesTile>
+        <NewFeaturesTile wide class="graphics-bg">
+          Новая графика
+        </NewFeaturesTile>
+        <NewFeaturesTile class="locations-bg">Новые локации</NewFeaturesTile>
+        <NewFeaturesTile class="rpg-bg">Реворк RPG системы</NewFeaturesTile>
       </div>
     </div>
+
     <div class="container mx-auto my-26 flex flex-col gap-8">
       <div class="rfad-styled-text-gradient text-3xl font-semibold">
-        Новое виденье Скайрима
+        Почему RFAD?
       </div>
-      <div class="tiles w-full">
-        <WhyWeTile class="weapons-bg">Новое оружие</WhyWeTile>
-        <WhyWeTile class="bosses-bg">Новые боссы</WhyWeTile>
-        <WhyWeTile wide class="features-bg"> Новые механики </WhyWeTile>
-        <WhyWeTile wide class="graphics-bg">Новая графика</WhyWeTile>
-        <WhyWeTile class="locations-bg">Новые локации</WhyWeTile>
-        <WhyWeTile class="rpg-bg"> Реворк RPG системы </WhyWeTile>
+      <div class="why-we-tiles w-full">
+        <WhyWeTile class="weapons-bg">Частые обновления</WhyWeTile>
+        <WhyWeTile class="bosses-bg">Технологичность</WhyWeTile>
+        <WhyWeTile class="features-bg">
+          Множество дополнительного контента
+        </WhyWeTile>
+        <WhyWeTile class="graphics-bg">Лаунчер и простая установка</WhyWeTile>
       </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import NavBar from '~/components/NavBar.vue'
+import Button from '~/components/Button.vue'
+import NewFeaturesTile from '~/components/NewFeaturesTile.vue'
+import WhyWeTile from '~/components/WhyWeTile.vue'
+</script>
 
 <style lang="scss">
 .bg {
@@ -72,26 +85,49 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 $gap: 24px;
 
-.tiles {
+/* === Секция «Новое виденье Скайрима» остаётся на flex === */
+.features-tiles {
   display: flex;
   flex-wrap: wrap;
   gap: $gap;
 }
 
-.tiles > * {
+.features-tiles > * {
   flex: 0 0 calc((75% - 2 * #{$gap}) / 3);
 }
 
-.tiles > .wide {
+.features-tiles > .wide {
   flex: 0 0 calc(2 * ((50% - 2 * #{$gap}) / 2) + #{$gap});
 }
 
-/* бэкграунды */
+.why-we-tiles {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'weapons   bosses    graphics'
+    'mechanics mechanics graphics';
+}
+
+.why-we-tiles .weapons-bg {
+  grid-area: weapons;
+}
+.why-we-tiles .bosses-bg {
+  grid-area: bosses;
+}
+.why-we-tiles .features-bg {
+  grid-area: mechanics;
+}
+.why-we-tiles .graphics-bg {
+  grid-area: graphics;
+  height: 100%;
+}
+
 .weapons-bg {
   background-image: url('assets/images/NewWeapons.webp');
 }
@@ -111,9 +147,3 @@ $gap: 24px;
   background-image: url('assets/images/RPGRework.webp');
 }
 </style>
-
-<script setup lang="ts">
-import NavBar from '~/components/NavBar.vue'
-import Button from '~/components/Button.vue'
-import WhyWeTile from '~/components/WhyWeTile.vue'
-</script>

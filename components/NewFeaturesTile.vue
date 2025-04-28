@@ -1,10 +1,14 @@
 <template>
-  <div class="tile">
+  <div class="tile" :class="{ wide: props.wide }">
     <slot />
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps<{
+  wide?: boolean
+}>()
+</script>
 
 <style lang="scss">
 .tile {
