@@ -20,7 +20,6 @@
 
 <script setup lang="ts">
 import { isBrowser } from '~/utils/isBrowser.util'
-import { useLocaleHead } from '#i18n'
 
 const brand = 'RFAD SE'
 const title = `${brand} by Immersive Chicken`

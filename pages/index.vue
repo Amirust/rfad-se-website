@@ -14,14 +14,14 @@
           глобального мода Requiem.
         </div>
         <div class="flex flex-row gap-5 mt-3.5">
-          <Button to="/download">Узнать больше</Button>
+          <Button to="#why-we">Узнать больше</Button>
           <Button to="/download">Скачать</Button>
         </div>
       </div>
       <div class="opacity-0">Text for normal margin =) Hello</div>
     </div>
 
-    <div class="container mx-auto my-26 flex flex-col gap-8">
+    <div class="container mx-auto my-26 flex flex-col gap-8" id="why-we">
       <div class="rfad-styled-text-gradient text-3xl font-semibold">
         Новое виденье Скайрима
       </div>
@@ -44,14 +44,31 @@
         Почему RFAD?
       </div>
       <div class="why-we-tiles w-full">
-        <WhyWeTile class="weapons-bg">Частые обновления</WhyWeTile>
-        <WhyWeTile class="bosses-bg">Технологичность</WhyWeTile>
-        <WhyWeTile class="features-bg">
+        <WhyWeTile class="dragon-bg">Частые обновления</WhyWeTile>
+        <WhyWeTile class="secondary-bg">Технологичность</WhyWeTile>
+        <WhyWeTile class="community-bg">
           Множество дополнительного контента
         </WhyWeTile>
-        <WhyWeTile class="graphics-bg">Лаунчер и простая установка</WhyWeTile>
+        <WhyWeTile class="launcher-bg">Лаунчер и простая установка</WhyWeTile>
       </div>
     </div>
+
+    <div class="second-bg py-96">
+      <div class="container mx-auto flex flex-col gap-1.5">
+        <div class="rfad-styled-text-gradient text-3xl font-semibold">
+          Бросьте вызов новому Скайриму!
+        </div>
+        <div class="text-brand-white font-semibold text-xl max-w-120 ml-[1px]">
+          RFAD SE — это передовая и технологичная Skyrim сборка на основе
+          глобального мода Requiem.
+        </div>
+        <div class="flex flex-row gap-5 mt-3.5">
+          <Button to="/download">Скачать</Button>
+        </div>
+      </div>
+    </div>
+
+    <Footer />
   </div>
 </template>
 
@@ -60,6 +77,7 @@ import NavBar from '~/components/NavBar.vue'
 import Button from '~/components/Button.vue'
 import NewFeaturesTile from '~/components/NewFeaturesTile.vue'
 import WhyWeTile from '~/components/WhyWeTile.vue'
+import Footer from '~/components/Footer.vue'
 </script>
 
 <style lang="scss">
@@ -73,18 +91,6 @@ import WhyWeTile from '~/components/WhyWeTile.vue'
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.rfad-styled-text-gradient {
-  background: linear-gradient(
-      173.737deg,
-      rgba(13, 12, 10, 0%) 0%,
-      #9d7f6d 100%
-    ),
-    linear-gradient(#ffeabf, #ffeabf);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 $gap: 24px;
@@ -120,10 +126,10 @@ $gap: 24px;
 .why-we-tiles .bosses-bg {
   grid-area: bosses;
 }
-.why-we-tiles .features-bg {
+.why-we-tiles .community-bg {
   grid-area: mechanics;
 }
-.why-we-tiles .graphics-bg {
+.why-we-tiles .launcher-bg {
   grid-area: graphics;
   height: 100%;
 }
@@ -145,5 +151,31 @@ $gap: 24px;
 }
 .rpg-bg {
   background-image: url('assets/images/RPGRework.webp');
+}
+.community-bg {
+  background-image: url('assets/images/CommunityContent.webp');
+}
+.dragon-bg {
+  background-image: url('assets/images/Dragon.webp');
+}
+.secondary-bg {
+  background-image: url('assets/images/SecondBG.webp');
+}
+.launcher-bg {
+  background-image: url('assets/images/Launcher.webp');
+}
+
+.second-bg {
+  background: linear-gradient(
+      180deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0%) 50%,
+      #000000 100%
+    ),
+    linear-gradient(rgba(0, 0, 0, 20%), rgba(0, 0, 0, 20%)),
+    url('assets/images/SecondBG.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>

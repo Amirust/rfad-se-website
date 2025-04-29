@@ -7,3 +7,15 @@
 html {
   @apply scroll-smooth;
 }
+
+.rfad-styled-text-gradient {
+  background: linear-gradient(
+                  173.737deg,
+                  rgba(13, 12, 10, 0%) -100%,
+                  #9d7f6d 100%
+  ),
+  linear-gradient(#ffeabf, #ffeabf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

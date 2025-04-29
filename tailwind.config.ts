@@ -46,6 +46,7 @@ export default {
         'block-inner-text': '#E8D6B1',
         'white-transparent': 'rgba(255,255,255,0.75)',
         'brand-white': '#DBDBDB',
+        'footer-bg': '#0D0C0A',
         'tile-border': '#202020',
       },
     },
