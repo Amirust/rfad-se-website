@@ -80,7 +80,7 @@ import WhyWeTile from '~/components/WhyWeTile.vue'
 import Footer from '~/components/Footer.vue'
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .bg {
   background-image: linear-gradient(
       to bottom,

@@ -48,6 +48,7 @@ export default {
         'brand-white': '#DBDBDB',
         'footer-bg': '#0D0C0A',
         'tile-border': '#202020',
+        'secondary-transparent': 'rgba(191,175,143,0.25)',
       },
     },
   },

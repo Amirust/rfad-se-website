@@ -7,12 +7,12 @@
     <div class="flex flex-col justify-between h-full">
       <div class="flex flex-col">
         <div class="rfad-styled-text-gradient text-2xl font-bold">RFAD SE</div>
-        <div class="text-white text-opacity-50 font-semibold">
+        <div class="text-white text-opacity-50 font-medium">
           Оригинал от Xandr,<br />
           реворк от Immersive Chicken.
         </div>
       </div>
-      <div class="font-semibold text-lg text-white text-opacity-50">
+      <div class="font-medium text-lg text-white text-opacity-50">
         Сайт был сделан:
         <span class="amirust-gradient">Amirust</span> &
         <span class="zodiac-gradient">Zodiac</span>
@@ -21,7 +21,9 @@
 
     <div class="flex flex-col gap-2.5">
       <div>
-        <div class="text-white text-opacity-50 font-bold text-lg">Ресурсы</div>
+        <div class="text-white text-opacity-50 font-semibold text-lg">
+          Ресурсы
+        </div>
       </div>
       <div class="text-white text-opacity-50 font-medium">
         <div>Скачать RFAD</div>
@@ -32,7 +34,7 @@
 
     <div class="flex flex-col gap-2.5">
       <div>
-        <div class="text-white text-opacity-50 font-bold text-lg">
+        <div class="text-white text-opacity-50 font-semibold text-lg">
           Соц. Сети
         </div>
       </div>
@@ -45,7 +47,7 @@
 
     <div class="flex flex-col gap-2.5">
       <div>
-        <div class="text-white text-opacity-50 font-bold text-lg">
+        <div class="text-white text-opacity-50 font-semibold text-lg">
           Поддержать
         </div>
       </div>
@@ -57,7 +59,7 @@
 
     <div class="flex flex-col gap-2.5">
       <div>
-        <div class="text-white text-opacity-50 font-bold text-lg">
+        <div class="text-white text-opacity-50 font-semibold text-lg">
           Особая благодарность
         </div>
       </div>
