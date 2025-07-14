@@ -58,7 +58,7 @@ const setStage = (stage: Stage) => {
           </div>
         </div>
         <div
-          class="flex flex-row gap-2.5 items-center"
+          class="flex flex-row gap-2.5 items-center cursor-pointer"
           @click="setStage(Stage.Download)"
         >
           <SquareIcon :id="Stage.Download" :current="activeStage">
@@ -75,7 +75,7 @@ const setStage = (stage: Stage) => {
           </div>
         </div>
         <div
-          class="flex flex-row gap-2.5 items-center"
+          class="flex flex-row gap-2.5 items-center cursor-pointer"
           @click="setStage(Stage.Install)"
         >
           <SquareIcon :id="Stage.Install" :current="activeStage">
@@ -92,7 +92,7 @@ const setStage = (stage: Stage) => {
           </div>
         </div>
         <div
-          class="flex flex-row gap-2.5 items-center"
+          class="flex flex-row gap-2.5 items-center cursor-pointer"
           @click="setStage(Stage.Update)"
         >
           <SquareIcon :id="Stage.Update" :current="activeStage">
@@ -109,7 +109,7 @@ const setStage = (stage: Stage) => {
           </div>
         </div>
         <div
-          class="flex flex-row gap-2.5 items-center"
+          class="flex flex-row gap-2.5 items-center cursor-pointer"
           @click="setStage(Stage.Play)"
         >
           <SquareIcon :id="Stage.Play" :current="activeStage">
