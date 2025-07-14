@@ -8,7 +8,7 @@ const props = defineProps<ButtonProps>()
 
 <template>
   <div
-    class="bg-block border border-block-border px-4 py-2 w-fit rounded-md hover:opacity-85 hover:cursor-pointer transition-all duration-200"
+    class="bg-block border border-block-border px-4 py-2 w-fit rounded-md hover:opacity-85 hover:cursor-pointer transition-all duration-200 active:scale-95"
   >
     <NuxtLink
       :to="props.to"
