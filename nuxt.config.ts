@@ -20,16 +20,10 @@ export default defineNuxtConfig({
 
   $production: {
     nitro: {
-      preset: 'cloudflare-pages-static',
+      preset: 'github_pages',
     },
     routeRules: {
       '/': { prerender: true },
-    },
-  },
-
-  vite: {
-    server: {
-      allowedHosts: ['test2.rinisle.uk'],
     },
   },
 })
