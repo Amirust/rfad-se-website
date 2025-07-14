@@ -18,12 +18,12 @@ export default defineNuxtConfig({
   css: ['~/assets/css/global.scss'],
   modules: ['@nuxtjs/i18n'],
 
-  // $production: {
-  // nitro: {
-  //   preset: 'github_pages',
-  // },
-  // routeRules: {
-  //   '/': { prerender: true },
-  // },
-  // },
+  $production: {
+    nitro: {
+      preset: 'github_pages',
+    },
+    routeRules: {
+      '/': { prerender: true },
+    },
+  },
 })
