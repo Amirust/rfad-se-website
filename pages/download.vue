@@ -38,16 +38,18 @@ const setStage = (stage: Stage) => {
       <NavBar />
       <div class="container mx-auto flex flex-col gap-1.5 my-44">
         <div class="font-semibold rfad-styled-text-gradient">
-          <div class="text-6xl">Установка RFAD SE</div>
+          <div class="md:text-6xl text-4xl">Установка RFAD SE</div>
         </div>
-        <div class="text-brand-white font-semibold text-2xl">
+        <div class="text-brand-white font-semibold md:text-2xl text-xl">
           Это намного проще, чем кажется! <br />
           Если вы живете в ЕС, скачивайте игру через Google
         </div>
       </div>
       <div class="opacity-0">Text for normal margin =) Hello</div>
     </div>
-    <div class="container mx-auto mb-34 flex flex-row gap-40">
+    <div
+      class="container mx-auto mb-34 flex md:flex-row flex-col md:gap-40 gap-10"
+    >
       <div class="flex flex-col gap-4">
         <div>
           <div class="text-2xl text-primary font-semibold">

@@ -2,9 +2,9 @@
   <div>
     <div class="bg text-white">
       <NavBar />
-      <div class="container mx-auto flex flex-col gap-1.5 my-96">
+      <div class="container mx-auto flex flex-col gap-1.5 mt-56 mb-64 md:my-96">
         <div class="font-semibold rfad-styled-text-gradient">
-          <div class="text-6xl">Requiem For A Dream</div>
+          <div class="text-4xl md:text-6xl">Requiem For A Dream</div>
           <div class="text-3xl ml-[3px] mt-[-0.3rem] tracking-wide">
             by Immersive Chicken
           </div>
@@ -132,6 +132,32 @@ $gap: 24px;
 .why-we-tiles .launcher-bg {
   grid-area: graphics;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  $gap: 16px;
+
+  .features-tiles {
+    gap: $gap;
+  }
+
+  .features-tiles > * {
+    flex: 0 0 calc((100% - #{$gap}) / 2);
+  }
+  .features-tiles > .wide {
+    flex: 0 0 calc(2 * ((100% - #{$gap}) / 2) + #{$gap});
+  }
+
+  .why-we-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: $gap;
+  }
+
+  .why-we-tiles > .launcher-bg {
+    @apply h-52;
+  }
 }
 
 .weapons-bg {

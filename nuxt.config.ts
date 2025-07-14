@@ -26,4 +26,10 @@ export default defineNuxtConfig({
       '/': { prerender: true },
     },
   },
+
+  vite: {
+    server: {
+      allowedHosts: ['test2.rinisle.uk'],
+    },
+  },
 })

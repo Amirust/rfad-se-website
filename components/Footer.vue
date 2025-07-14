@@ -1,10 +1,8 @@
-<script setup lang="ts"></script>
-
 <template>
   <div
-    class="container mx-auto w-[calc(60%-40px)] text-primary h-40 bg-footer-bg border border-1 border-b-0 rounded-t-md border-tile-border pt-6 pb-3 px-8 flex flex-row justify-between"
+    class="container mx-auto w-[calc(100%-40px)] md:w-[calc(60%-40px)] text-primary h-full md:h-40 bg-footer-bg border border-1 border-b-0 rounded-t-md border-tile-border pt-6 pb-3 px-8 flex flex-col md:flex-row justify-between gap-y-4"
   >
-    <div class="flex flex-col justify-between h-full">
+    <div class="flex flex-col justify-between h-full w-full">
       <div class="flex flex-col">
         <div class="rfad-styled-text-gradient text-2xl font-bold">RFAD SE</div>
         <div class="text-white text-opacity-50 font-medium">
@@ -19,54 +17,60 @@
       </div>
     </div>
 
-    <div class="flex flex-col gap-2.5">
-      <div>
-        <div class="text-white text-opacity-50 font-semibold text-lg">
-          Ресурсы
+    <div class="flex flex-row justify-between w-full max-w-96">
+      <div class="flex flex-col gap-2.5 w-52 md:w-full">
+        <div>
+          <div class="text-white text-opacity-50 font-semibold text-lg">
+            Ресурсы
+          </div>
+        </div>
+        <div class="text-white text-opacity-50 font-medium">
+          <div>Скачать RFAD</div>
+          <div>Патч ноут</div>
+          <div>База Знаний</div>
         </div>
       </div>
-      <div class="text-white text-opacity-50 font-medium">
-        <div>Скачать RFAD</div>
-        <div>Патч ноут</div>
-        <div>База Знаний</div>
+
+      <div class="flex flex-col gap-2.5 w-32 md:w-full">
+        <div>
+          <div class="text-white text-opacity-50 font-semibold text-lg">
+            Соц. Сети
+          </div>
+        </div>
+        <div class="text-white text-opacity-50 font-medium">
+          <div>Telegram</div>
+          <div>Discord</div>
+          <div>ВКонтакте</div>
+        </div>
       </div>
     </div>
 
-    <div class="flex flex-col gap-2.5">
-      <div>
-        <div class="text-white text-opacity-50 font-semibold text-lg">
-          Соц. Сети
+    <div
+      class="flex flex-row-reverse md:flex-row justify-between w-full max-w-96"
+    >
+      <div class="flex flex-col gap-2.5 w-32 md:w-full">
+        <div>
+          <div class="text-white text-opacity-50 font-semibold text-lg">
+            Поддержать
+          </div>
+        </div>
+        <div class="text-white text-opacity-50 font-medium">
+          <div>Boosty</div>
+          <div>Patreon</div>
         </div>
       </div>
-      <div class="text-white text-opacity-50 font-medium">
-        <div>Telegram</div>
-        <div>Discord</div>
-        <div>ВКонтакте</div>
-      </div>
-    </div>
 
-    <div class="flex flex-col gap-2.5">
-      <div>
-        <div class="text-white text-opacity-50 font-semibold text-lg">
-          Поддержать
+      <div class="flex flex-col gap-2.5 w-52 md:w-full">
+        <div>
+          <div class="text-white text-opacity-50 font-semibold text-lg">
+            Особая благодарность
+          </div>
         </div>
-      </div>
-      <div class="text-white text-opacity-50 font-medium">
-        <div>Boosty</div>
-        <div>Patreon</div>
-      </div>
-    </div>
-
-    <div class="flex flex-col gap-2.5">
-      <div>
-        <div class="text-white text-opacity-50 font-semibold text-lg">
-          Особая благодарность
+        <div class="text-white text-opacity-50 font-medium">
+          <div>Akira Ray (Скриншоты)</div>
+          <div>Nerury (Скриншоты)</div>
+          <div>Hokuto no Ken (Скриншоты)</div>
         </div>
-      </div>
-      <div class="text-white text-opacity-50 font-medium">
-        <div>Akira Ray (Скриншоты)</div>
-        <div>Nerury (Скриншоты)</div>
-        <div>Hokuto no Ken (Скриншоты)</div>
       </div>
     </div>
   </div>
@@ -97,3 +101,4 @@
   background-clip: text;
 }
 </style>
+<script setup lang="ts"></script>
