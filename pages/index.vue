@@ -159,7 +159,7 @@ onMounted(() => {
     opacity: [0, 1],
     translateY: [-20, 0],
     duration: 800,
-    delay: 2000,
+    delay: 2400,
     easing: 'easeInOutQuad',
   })
 
