@@ -1,4 +1,4 @@
-import ru from '~/locale/ru'
+import ru from '~/locales/ru'
 
 const messages = { ru }
 

@@ -11,7 +11,7 @@
     "lint": "eslint ./ --fix"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "^9.5.3",
+    "@nuxtjs/i18n": "^10.0.4",
     "@vueuse/core": "^12.8.2",
     "eslint": "^9.25.1",
     "nuxt": "4.0.3",

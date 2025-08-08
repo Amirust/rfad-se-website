@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Button from '~/components/Button.vue'
 import NavBar from '~/components/NavBar.vue'
 import Download from '~/components/icons/Download.vue'
 import Install from '~/components/icons/Install.vue'
@@ -8,6 +7,8 @@ import Play from '~/components/icons/Play.vue'
 import Footer from '~/components/Footer.vue'
 import DownloadFile from '~/components/icons/DownloadFile.vue'
 import SmallButton from '~/components/SmallButton.vue'
+
+const { t } = useI18n()
 
 enum Stage {
   Download = 1,
@@ -38,14 +39,16 @@ const setStage = (stage: Stage) => {
       <NavBar />
       <div class="container mx-auto flex flex-col gap-1.5 my-44">
         <div class="font-semibold rfad-styled-text-gradient">
-          <div class="md:text-6xl text-4xl">Установка RFAD SE</div>
+          <div class="md:text-6xl text-4xl">
+            {{ t('download.hero.title') }}
+          </div>
         </div>
-        <div class="text-brand-white font-semibold md:text-2xl text-xl">
-          Это намного проще, чем кажется! <br />
-          Если вы живете в ЕС, скачивайте игру через Google
-        </div>
+        <div
+          class="text-brand-white font-semibold md:text-2xl text-xl"
+          v-html="t('download.hero.subtitleHtml')"
+        ></div>
       </div>
-      <div class="opacity-0">Text for normal margin =) Hello</div>
+      <div class="opacity-0">{{ t('common.marginNote') }}</div>
     </div>
     <div
       class="container mx-auto mb-34 flex md:flex-row flex-col md:gap-40 gap-10"
@@ -53,10 +56,10 @@ const setStage = (stage: Stage) => {
       <div class="flex flex-col gap-4">
         <div>
           <div class="text-2xl text-primary font-semibold">
-            Как начать играть?
+            {{ t('download.sidebar.title') }}
           </div>
           <div class="text-base text-primary font-normal">
-            Выполните эти 4 простых шага
+            {{ t('download.sidebar.subtitle') }}
           </div>
         </div>
         <div
@@ -73,7 +76,7 @@ const setStage = (stage: Stage) => {
             }"
             class="font-medium text-lg"
           >
-            Скачаем сборку
+            {{ t('download.stages.download') }}
           </div>
         </div>
         <div
@@ -90,7 +93,7 @@ const setStage = (stage: Stage) => {
             }"
             class="font-medium text-lg"
           >
-            Установим
+            {{ t('download.stages.install') }}
           </div>
         </div>
         <div
@@ -107,7 +110,7 @@ const setStage = (stage: Stage) => {
             }"
             class="font-medium text-lg"
           >
-            Обновим
+            {{ t('download.stages.update') }}
           </div>
         </div>
         <div
@@ -124,7 +127,7 @@ const setStage = (stage: Stage) => {
             }"
             class="font-medium text-lg"
           >
-            Играем!
+            {{ t('download.stages.play') }}
           </div>
         </div>
       </div>
@@ -133,7 +136,7 @@ const setStage = (stage: Stage) => {
           <div class="flex flex-col gap-4">
             <div>
               <div class="text-2xl text-primary font-semibold">
-                Скачаем сборку
+                {{ t('download.sections.download.title') }}
               </div>
               <div
                 class="flex flex-row gap-2.5 text-base font-semibold tracking-wide"
@@ -147,7 +150,7 @@ const setStage = (stage: Stage) => {
                     'text-secondary': activeDownloadTab !== 'torrent',
                   }"
                 >
-                  Torrent
+                  {{ t('download.tabs.torrent') }}
                 </div>
                 <div
                   @click="activeDownloadTab = 'google'"
@@ -158,7 +161,7 @@ const setStage = (stage: Stage) => {
                     'text-secondary': activeDownloadTab !== 'google',
                   }"
                 >
-                  Google Drive
+                  {{ t('download.tabs.google') }}
                 </div>
               </div>
             </div>
@@ -167,68 +170,37 @@ const setStage = (stage: Stage) => {
                 v-if="activeDownloadTab === 'torrent'"
                 class="text-secondary text-lg min-h-96"
               >
-                Скачайте
-                <a class="bold text-block-inner-text">Torrent файл</a>
-                установщика. Мы рекомендуем использовать
-                <a class="bold text-block-inner-text">QBitTorrent</a> для
-                скачиванния. <br /><br />
-                В установщике уже вшита игра Skyrim SE + сборка.<br />
-                <p class="bold text-block-inner-text">
-                  ВАМ НЕ НУЖНА ОФФИЦИАЛЬНАЯ КОПИЯ SKYRIM SE.
-                </p>
-                <br />
-                <p class="font-semibold">Системные требования</p>
-                Для игры без ENB — GTX 1060 (6гб VRAM) либо эквивалент от
-                AMD.<br />
-                Для игры с ENB — GTX 1660 либо Radeon 570 и выше.<br />
-                Как минимум 4-х ядерный процессор 3.5GHz.<br />
-                Минимум 8гб оперативной памяти.<br />
-                ~65гб места на диске. Рекомендуется ставить на SSD.
-
+                <div v-html="t('download.sections.download.torrentHtml')"></div>
                 <div class="mt-2 flex flex-row gap-2.5">
                   <SmallButton to="">
                     <div class="flex flex-row gap-1.5 items-center">
-                      <DownloadFile /> Torrent Файл
+                      <DownloadFile /> {{ t('download.actions.torrentFile') }}
                     </div>
                   </SmallButton>
                   <SmallButton to="" @click="nextStage">
-                    <div class="flex flex-row gap-1.5 items-center">Дальше</div>
+                    <div class="flex flex-row gap-1.5 items-center">
+                      {{ t('common.next') }}
+                    </div>
                   </SmallButton>
                 </div>
               </div>
               <div v-else class="text-secondary text-lg min-h-96">
-                Перейдите по <a class="bold text-block-inner-text">ссылке</a>,
-                там вы найдете 23 bin файла. Их все нужно скачать, а так же
-                поместить в отдельную папку.<br />
-                После того как вы это сделали, скачайте по
-                <a class="bold text-block-inner-text">этой ссылке</a> exe файл
-                установщика, и поместите его в эту же папку. <br /><br />
-                В установщике уже вшита игра Skyrim SE + сборка.<br />
-                <p class="bold text-block-inner-text">
-                  ВАМ НЕ НУЖНА ОФФИЦИАЛЬНАЯ КОПИЯ SKYRIM SE.
-                </p>
-                <br />
-                <p class="font-semibold">Системные требования</p>
-                Для игры без ENB — GTX 1060 (6гб VRAM) либо эквивалент от
-                AMD.<br />
-                Для игры с ENB — GTX 1660 либо Radeon 570 и выше.<br />
-                Как минимум 4-х ядерный процессор 3.5GHz.<br />
-                Минимум 8гб оперативной памяти.<br />
-                ~65гб места на диске. Рекомендуется ставить на SSD.
-
+                <div v-html="t('download.sections.download.googleHtml')"></div>
                 <div class="mt-2 flex flex-row gap-2.5">
                   <SmallButton to="">
                     <div class="flex flex-row gap-1.5 items-center">
-                      <DownloadFile /> Google drive
+                      <DownloadFile /> {{ t('download.actions.googleDrive') }}
                     </div>
                   </SmallButton>
                   <SmallButton to="">
                     <div class="flex flex-row gap-1.5 items-center">
-                      <DownloadFile /> Установщик
+                      <DownloadFile /> {{ t('download.actions.installer') }}
                     </div>
                   </SmallButton>
                   <SmallButton to="" @click="nextStage">
-                    <div class="flex flex-row gap-1.5 items-center">Дальше</div>
+                    <div class="flex flex-row gap-1.5 items-center">
+                      {{ t('common.next') }}
+                    </div>
                   </SmallButton>
                 </div>
               </div>
@@ -238,25 +210,15 @@ const setStage = (stage: Stage) => {
         <template v-else-if="activeStage === Stage.Install">
           <div class="flex flex-col gap-4">
             <div class="text-2xl text-primary font-semibold">
-              Установим сборку
+              {{ t('download.sections.install.title') }}
             </div>
             <div class="text-secondary text-lg min-h-96">
-              После того как вы всё скачали, откройте установщик
-              <span class="bold text-block-inner-text">RfaD SE 6.0.exe</span>
-              и установите сборку.<br /><br />
-              <p class="font-semibold">ВАЖНО</p>
-              1. Я не знаю что выбрать: ENB или ReShade<br />
-              Для игры с ReShade — GTX 1060 (6гб VRAM) либо эквивалент от
-              AMD.<br />
-              Для игры с ENB — GTX 1660 либо Radeon 570 и выше.<br />
-              Если вы играете на ноутбуках, где видеокарта слабее чем RTX 3060M,
-              рекомендуется выбрать ReShade.<br />
-              2. Мы рекомендуем выбирать все Redist (.NET 6.0 и Microsoft Visual
-              C++) чтобы избежать проблем с сборкой.
-
+              <div v-html="t('download.sections.install.html')"></div>
               <div class="mt-2 flex flex-row gap-2.5">
                 <SmallButton to="" @click="nextStage">
-                  <div class="flex flex-row gap-1.5 items-center">Дальше</div>
+                  <div class="flex flex-row gap-1.5 items-center">
+                    {{ t('common.next') }}
+                  </div>
                 </SmallButton>
               </div>
             </div>
@@ -265,30 +227,15 @@ const setStage = (stage: Stage) => {
         <template v-else-if="activeStage === Stage.Update">
           <div class="flex flex-col gap-4">
             <div class="text-2xl text-primary font-semibold">
-              Обновим сборку
+              {{ t('download.sections.update.title') }}
             </div>
             <div class="text-secondary text-lg min-h-96">
-              Так как мы часто обновляем сборку, очень важно постоянно
-              поддерживать актуальный контент.<br />
-              После установки игры, найдите на вашем рабочем столе ярлык
-              <span class="bold text-block-inner-text">RfaD Launcher</span>,
-              откройте его.<br />
-              Дальше подождите несколько секунд пока лаунчер проверит наличие
-              актуальной версии, и нажмите кнопку
-              <span class="bold text-block-inner-text">ОБНОВИТЬ</span>.
-              <br />
-              Дождитесь уведомления что обновление закончено, и можете
-              наслаждаться игрой!<br /><br />
-              <p class="font-semibold">ВАЖНО</p>
-              Зачастую при обновлениях вам нужно будет начинать новую игру.<br />Это
-              рекомендуемая практика чтобы исбежать каких либо проблем с игрой.
-              <br />
-              Новую игру можно не начинать только в том случае, если в выпуске
-              новостей о патче было об это сказано.
-
+              <div v-html="t('download.sections.update.html')"></div>
               <div class="mt-2 flex flex-row gap-2.5">
                 <SmallButton to="" @click="nextStage">
-                  <div class="flex flex-row gap-1.5 items-center">Дальше</div>
+                  <div class="flex flex-row gap-1.5 items-center">
+                    {{ t('common.next') }}
+                  </div>
                 </SmallButton>
               </div>
             </div>
@@ -297,24 +244,20 @@ const setStage = (stage: Stage) => {
         <template v-else-if="activeStage === Stage.Play">
           <div class="flex flex-col gap-4">
             <div class="text-2xl text-primary font-semibold">
-              Наслаждаемся игрой!
+              {{ t('download.sections.play.title') }}
             </div>
             <div class="text-secondary text-lg min-h-96">
-              Было просто, не так ли?<br />
-              Теперь, когда сборка скачана и обновлена, вы можете погрузиться в
-              мир RFAD SE!<br />
-              Не забывайте присоединятся к нашим комьюнити в
-              <a class="bold text-block-inner-text">Discord</a> и
-              <a class="bold text-block-inner-text">Telegram</a>!
-              <br />
-              <br />
-              Вы можете закрыть эту вкладку.
+              <div v-html="t('download.sections.play.html')"></div>
               <div class="mt-2 flex flex-row gap-2.5">
                 <SmallButton to="" @click="nextStage">
-                  <div class="flex flex-row gap-1.5 items-center">Discord</div>
+                  <div class="flex flex-row gap-1.5 items-center">
+                    {{ t('common.discord') }}
+                  </div>
                 </SmallButton>
                 <SmallButton to="" @click="nextStage">
-                  <div class="flex flex-row gap-1.5 items-center">Telegram</div>
+                  <div class="flex flex-row gap-1.5 items-center">
+                    {{ t('common.telegram') }}
+                  </div>
                 </SmallButton>
               </div>
             </div>

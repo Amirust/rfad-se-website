@@ -8,57 +8,70 @@
       <NavBar id="nav" />
       <div class="container mx-auto flex flex-col gap-1.5 mt-56 mb-64 md:my-96">
         <div class="font-semibold rfad-styled-text-gradient" id="requiem">
-          <div class="text-4xl md:text-6xl">Requiem For A Dream</div>
+          <div class="text-4xl md:text-6xl">{{ t('index.hero.title') }}</div>
         </div>
         <div class="font-semibold rfad-styled-text-gradient" id="chicken">
           <div class="text-3xl ml-[3px] mt-[-0.3rem] tracking-wide">
-            by Immersive Chicken
+            {{ t('index.hero.subtitle') }}
           </div>
         </div>
         <div
           class="text-brand-white font-semibold text-xl max-w-120"
           id="title-description"
         >
-          RFAD SE — это передовая и технологичная Skyrim сборка на основе
-          глобального мода Requiem.
+          {{ t('index.hero.description') }}
         </div>
         <div class="flex flex-row gap-5 mt-3.5" id="title-buttons">
-          <Button to="#why-we">Узнать больше</Button>
-          <Button to="/download">Скачать</Button>
+          <Button to="#why-we">{{ t('index.hero.learnMore') }}</Button>
+          <Button to="/download">{{ t('common.download') }}</Button>
         </div>
       </div>
-      <div class="opacity-0">Text for normal margin =) Hello</div>
+      <div class="opacity-0">{{ t('common.marginNote') }}</div>
     </div>
 
     <div class="container mx-auto my-26 flex flex-col gap-8" id="features">
       <div class="rfad-styled-text-gradient text-3xl font-semibold">
-        Новое виденье Скайрима
+        {{ t('index.features.title') }}
       </div>
       <div class="features-tiles w-full">
-        <NewFeaturesTile class="weapons-bg">Новое оружие</NewFeaturesTile>
-        <NewFeaturesTile class="bosses-bg">Новые боссы</NewFeaturesTile>
+        <NewFeaturesTile class="weapons-bg">{{
+          t('index.features.tiles.weapons')
+        }}</NewFeaturesTile>
+        <NewFeaturesTile class="bosses-bg">{{
+          t('index.features.tiles.bosses')
+        }}</NewFeaturesTile>
         <NewFeaturesTile wide class="features-bg">
-          Новые механики
+          {{ t('index.features.tiles.mechanics') }}
         </NewFeaturesTile>
         <NewFeaturesTile wide class="graphics-bg">
-          Новая графика
+          {{ t('index.features.tiles.graphics') }}
         </NewFeaturesTile>
-        <NewFeaturesTile class="locations-bg">Новые локации</NewFeaturesTile>
-        <NewFeaturesTile class="rpg-bg">Реворк RPG системы</NewFeaturesTile>
+        <NewFeaturesTile class="locations-bg">{{
+          t('index.features.tiles.locations')
+        }}</NewFeaturesTile>
+        <NewFeaturesTile class="rpg-bg">{{
+          t('index.features.tiles.rpgRework')
+        }}</NewFeaturesTile>
       </div>
     </div>
 
     <div class="container mx-auto my-26 flex flex-col gap-8" id="why-we">
       <div class="rfad-styled-text-gradient text-3xl font-semibold">
-        Почему RFAD?
+        {{ t('index.why.title') }}
       </div>
       <div class="why-we-tiles w-full">
-        <WhyWeTile class="dragon-bg">Частые обновления</WhyWeTile>
-        <WhyWeTile class="secondary-bg">Технологичность</WhyWeTile>
+        <WhyWeTile class="dragon-bg">{{
+          t('index.why.tiles.updates')
+        }}</WhyWeTile>
+        <WhyWeTile class="secondary-bg">{{
+          t('index.why.tiles.technology')
+        }}</WhyWeTile>
         <WhyWeTile class="community-bg">
-          Множество дополнительного контента
+          {{ t('index.why.tiles.content') }}
         </WhyWeTile>
-        <WhyWeTile class="launcher-bg">Лаунчер и простая установка</WhyWeTile>
+        <WhyWeTile class="launcher-bg">{{
+          t('index.why.tiles.launcher')
+        }}</WhyWeTile>
       </div>
     </div>
 
@@ -68,16 +81,16 @@
           class="rfad-styled-text-gradient text-3xl font-semibold"
           id="download-title"
         >
-          Бросьте вызов новому Скайриму!
+          {{ t('index.download.title') }}
         </div>
         <div
           class="text-brand-white font-semibold text-xl max-w-120 ml-[1px]"
           id="download-description"
         >
-          RFAD SE — это не просто Skyrim сборка, это целый новый мир.
+          {{ t('index.download.description') }}
         </div>
         <div class="flex flex-row gap-5 mt-3.5" id="download-buttons">
-          <Button to="/download">Скачать</Button>
+          <Button to="/download">{{ t('common.download') }}</Button>
         </div>
       </div>
     </div>
@@ -92,6 +105,8 @@ import Button from '~/components/Button.vue'
 import NewFeaturesTile from '~/components/NewFeaturesTile.vue'
 import WhyWeTile from '~/components/WhyWeTile.vue'
 import Footer from '~/components/Footer.vue'
+
+const { t } = useI18n()
 
 const isLoading = ref(true)
 
@@ -109,7 +124,7 @@ onMounted(() => {
   $anime({
     targets: '#requiem',
     opacity: [0, 1],
-    duration: 1400,
+    duration: 1200,
     delay: 200,
     easing: 'easeInOutQuad',
   })

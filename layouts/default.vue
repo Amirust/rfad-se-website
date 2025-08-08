@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Html class="no-scrollbar">
+    <Html lang="ru" class="no-scrollbar">
       <Head>
         <Title>{{ title }}</Title>
         <Meta property="og:title" :content="title" />
