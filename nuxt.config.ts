@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/global.scss'],
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@hypernym/nuxt-anime'],
 
   $production: {
     nitro: {

@@ -11,6 +11,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundSize: {
+        '100%': '100%',
+      },
       spacing: {
         18: '4.5rem',
         26: '6.5rem',

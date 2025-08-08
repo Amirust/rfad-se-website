@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Html :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
+    <Html class="no-scrollbar">
       <Head>
         <Title>{{ title }}</Title>
         <Meta property="og:title" :content="title" />
@@ -28,11 +28,6 @@ const themeColorServer = '#0D0C0A'
 
 const themeColor = computed(() => {
   return isBrowser() ? themeColorBrowser : themeColorServer
-})
-
-const head = useLocaleHead({
-  dir: true,
-  seo: true,
 })
 </script>
 

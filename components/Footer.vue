@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto w-[calc(100%-40px)] md:w-[calc(60%-40px)] text-primary h-full md:h-40 bg-footer-bg border border-1 border-b-0 rounded-t-md border-tile-border pt-6 pb-3 px-8 flex flex-col md:flex-row justify-between gap-y-4"
+    class="container mx-auto w-[calc(100%-40px)] md:w-[calc(60%-40px)] text-primary h-full bg-footer-bg border border-1 border-b-0 rounded-t-md border-tile-border pt-6 pb-3 px-8 flex flex-col md:flex-row justify-between gap-y-4"
   >
     <div class="flex flex-col justify-between h-full w-full">
       <div class="flex flex-col">

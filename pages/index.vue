@@ -1,19 +1,28 @@
 <template>
-  <div>
+  <div
+    :class="{
+      'opacity-0': isLoading,
+    }"
+  >
     <div class="bg text-white">
-      <NavBar />
+      <NavBar id="nav" />
       <div class="container mx-auto flex flex-col gap-1.5 mt-56 mb-64 md:my-96">
-        <div class="font-semibold rfad-styled-text-gradient">
+        <div class="font-semibold rfad-styled-text-gradient" id="requiem">
           <div class="text-4xl md:text-6xl">Requiem For A Dream</div>
+        </div>
+        <div class="font-semibold rfad-styled-text-gradient" id="chicken">
           <div class="text-3xl ml-[3px] mt-[-0.3rem] tracking-wide">
             by Immersive Chicken
           </div>
         </div>
-        <div class="text-brand-white font-semibold text-xl max-w-120">
+        <div
+          class="text-brand-white font-semibold text-xl max-w-120"
+          id="title-description"
+        >
           RFAD SE — это передовая и технологичная Skyrim сборка на основе
           глобального мода Requiem.
         </div>
-        <div class="flex flex-row gap-5 mt-3.5">
+        <div class="flex flex-row gap-5 mt-3.5" id="title-buttons">
           <Button to="#why-we">Узнать больше</Button>
           <Button to="/download">Скачать</Button>
         </div>
@@ -21,7 +30,7 @@
       <div class="opacity-0">Text for normal margin =) Hello</div>
     </div>
 
-    <div class="container mx-auto my-26 flex flex-col gap-8" id="why-we">
+    <div class="container mx-auto my-26 flex flex-col gap-8" id="features">
       <div class="rfad-styled-text-gradient text-3xl font-semibold">
         Новое виденье Скайрима
       </div>
@@ -39,7 +48,7 @@
       </div>
     </div>
 
-    <div class="container mx-auto my-26 flex flex-col gap-8">
+    <div class="container mx-auto my-26 flex flex-col gap-8" id="why-we">
       <div class="rfad-styled-text-gradient text-3xl font-semibold">
         Почему RFAD?
       </div>
@@ -55,14 +64,19 @@
 
     <div class="second-bg py-96">
       <div class="container mx-auto flex flex-col gap-1.5">
-        <div class="rfad-styled-text-gradient text-3xl font-semibold">
+        <div
+          class="rfad-styled-text-gradient text-3xl font-semibold"
+          id="download-title"
+        >
           Бросьте вызов новому Скайриму!
         </div>
-        <div class="text-brand-white font-semibold text-xl max-w-120 ml-[1px]">
-          RFAD SE — это передовая и технологичная Skyrim сборка на основе
-          глобального мода Requiem.
+        <div
+          class="text-brand-white font-semibold text-xl max-w-120 ml-[1px]"
+          id="download-description"
+        >
+          RFAD SE — это не просто Skyrim сборка, это целый новый мир.
         </div>
-        <div class="flex flex-row gap-5 mt-3.5">
+        <div class="flex flex-row gap-5 mt-3.5" id="download-buttons">
           <Button to="/download">Скачать</Button>
         </div>
       </div>
@@ -78,6 +92,190 @@ import Button from '~/components/Button.vue'
 import NewFeaturesTile from '~/components/NewFeaturesTile.vue'
 import WhyWeTile from '~/components/WhyWeTile.vue'
 import Footer from '~/components/Footer.vue'
+
+const isLoading = ref(true)
+
+const { $anime } = useNuxtApp()
+
+onMounted(() => {
+  isLoading.value = false
+  $anime({
+    targets: '.bg',
+    opacity: [0, 1],
+    duration: 600,
+    easing: 'easeInOutQuad',
+  })
+
+  $anime({
+    targets: '#requiem',
+    opacity: [0, 1],
+    duration: 1400,
+    delay: 200,
+    easing: 'easeInOutQuad',
+  })
+
+  $anime({
+    targets: '#chicken',
+    opacity: [0, 1],
+    duration: 900,
+    delay: 900,
+    easing: 'easeInOutQuad',
+  })
+
+  $anime({
+    targets: '#title-description',
+    opacity: [0, 1],
+    duration: 1200,
+    delay: 1200,
+    easing: 'easeInOutQuad',
+  })
+
+  $anime({
+    targets: '#title-buttons',
+    opacity: [0, 1],
+    translateY: [20, 0],
+    duration: 800,
+    delay: 2000,
+    easing: 'easeInOutQuad',
+  })
+
+  $anime({
+    targets: '#nav',
+    opacity: [0, 1],
+    translateY: [-20, 0],
+    duration: 800,
+    delay: 2000,
+    easing: 'easeInOutQuad',
+  })
+
+  const tlFeatures = $anime.timeline({
+    easing: 'easeInOutQuad',
+    autoplay: false,
+  })
+
+  tlFeatures
+    .add({
+      targets: '#features > .rfad-styled-text-gradient',
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 600,
+    })
+    .add(
+      {
+        targets: '#features .features-tiles > *',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 500,
+        delay: $anime.stagger(120),
+      },
+      '-=200'
+    )
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          tlFeatures.play()
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.3 }
+  )
+
+  const featuresSection = document.getElementById('features')
+  if (featuresSection) observer.observe(featuresSection)
+
+  const tlWhyWe = $anime.timeline({
+    easing: 'easeInOutQuad',
+    autoplay: false,
+  })
+
+  tlWhyWe
+    .add({
+      targets: '#why-we > .rfad-styled-text-gradient',
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 600,
+    })
+    .add(
+      {
+        targets: '#why-we .why-we-tiles > *',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 500,
+        delay: $anime.stagger(120),
+      },
+      '-=200'
+    )
+
+  const whyWeObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          tlWhyWe.play()
+          whyWeObserver.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.5 }
+  )
+  const whyWeSection = document.getElementById('why-we')
+  if (whyWeSection) whyWeObserver.observe(whyWeSection)
+
+  const tlDownload = $anime.timeline({
+    easing: 'easeInOutQuad',
+    autoplay: false,
+  })
+
+  tlDownload
+    .add({
+      targets: '.second-bg',
+      opacity: [0, 1],
+      duration: 600,
+      easing: 'easeInOutQuad',
+    })
+    .add({
+      targets: '#download-title',
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 600,
+    })
+    .add(
+      {
+        targets: '#download-description',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 500,
+        delay: 50,
+      },
+      '-=200'
+    )
+    .add(
+      {
+        targets: '#download-buttons',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 500,
+        delay: $anime.stagger(120),
+      },
+      '-=200'
+    )
+
+  const downloadObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          tlDownload.play()
+          downloadObserver.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.5 }
+  )
+  const downloadSection = document.getElementById('download-title')
+  if (downloadSection) downloadObserver.observe(downloadSection)
+})
 </script>
 
 <style scoped lang="scss">

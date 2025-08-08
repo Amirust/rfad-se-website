@@ -14,7 +14,20 @@
     font-semibold
     text-lg
     rounded-md
-    bg-cover bg-center bg-no-repeat
+    bg-center bg-no-repeat
     border border-tile-border;
+
+  transition: background-size 0.3s ease-in-out;
+  background-size: cover;
+
+  &:hover {
+    @media (min-width: 1536px) {
+      background-size: 103%;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    background-size: 100%;
+  }
 }
 </style>
