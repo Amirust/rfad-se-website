@@ -7,6 +7,7 @@ import Play from '~/components/icons/Play.vue'
 import Footer from '~/components/Footer.vue'
 import DownloadFile from '~/components/icons/DownloadFile.vue'
 import SmallButton from '~/components/SmallButton.vue'
+import config from '~/config'
 
 const { t } = useI18n()
 
@@ -172,7 +173,7 @@ const setStage = (stage: Stage) => {
               >
                 <div v-html="t('download.sections.download.torrentHtml')"></div>
                 <div class="mt-2 flex flex-row gap-2.5">
-                  <SmallButton to="">
+                  <SmallButton :to="config.download.torrent">
                     <div class="flex flex-row gap-1.5 items-center">
                       <DownloadFile /> {{ t('download.actions.torrentFile') }}
                     </div>
@@ -187,12 +188,12 @@ const setStage = (stage: Stage) => {
               <div v-else class="text-secondary text-lg min-h-96">
                 <div v-html="t('download.sections.download.googleHtml')"></div>
                 <div class="mt-2 flex flex-row gap-2.5">
-                  <SmallButton to="">
+                  <SmallButton :to="config.download.googleLink">
                     <div class="flex flex-row gap-1.5 items-center">
                       <DownloadFile /> {{ t('download.actions.googleDrive') }}
                     </div>
                   </SmallButton>
-                  <SmallButton to="">
+                  <SmallButton :to="config.download.exeFile">
                     <div class="flex flex-row gap-1.5 items-center">
                       <DownloadFile /> {{ t('download.actions.installer') }}
                     </div>
@@ -249,14 +250,19 @@ const setStage = (stage: Stage) => {
             <div class="text-secondary text-lg min-h-96">
               <div v-html="t('download.sections.play.html')"></div>
               <div class="mt-2 flex flex-row gap-2.5">
-                <SmallButton to="" @click="nextStage">
+                <SmallButton :to="config.discordLink">
                   <div class="flex flex-row gap-1.5 items-center">
                     {{ t('common.discord') }}
                   </div>
                 </SmallButton>
-                <SmallButton to="" @click="nextStage">
+                <SmallButton :to="config.telegramLink">
                   <div class="flex flex-row gap-1.5 items-center">
                     {{ t('common.telegram') }}
+                  </div>
+                </SmallButton>
+                <SmallButton to="/" :dont-open-in-new-tab="true">
+                  <div class="flex flex-row gap-1.5 items-center">
+                    На главную
                   </div>
                 </SmallButton>
               </div>

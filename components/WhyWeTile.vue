@@ -15,7 +15,7 @@
     text-lg
     rounded-md
     bg-center bg-no-repeat
-    border border-tile-border;
+    border border-tile-border text-center;
 
   transition: background-size 0.3s ease-in-out;
   background-size: cover;

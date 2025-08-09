@@ -1,6 +1,7 @@
 <script setup lang="ts">
 export interface ButtonProps {
   to: string
+  dontOpenInNewTab?: boolean
 }
 
 const props = defineProps<ButtonProps>()
@@ -12,6 +13,7 @@ const props = defineProps<ButtonProps>()
   >
     <NuxtLink
       :to="props.to"
+      :target="props.dontOpenInNewTab ? undefined : '_blank'"
       class="text-block-inner-text uppercase font-semibold tracking-wider text-sm"
     >
       <slot />

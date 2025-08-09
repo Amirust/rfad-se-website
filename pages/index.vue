@@ -22,7 +22,7 @@
           {{ t('index.hero.description') }}
         </div>
         <div class="flex flex-row gap-5 mt-3.5" id="title-buttons">
-          <Button to="#why-we">{{ t('index.hero.learnMore') }}</Button>
+          <Button to="#features">{{ t('index.hero.learnMore') }}</Button>
           <Button to="/download">{{ t('common.download') }}</Button>
         </div>
       </div>

@@ -25,9 +25,11 @@
           </div>
         </div>
         <div class="text-white text-opacity-50 font-medium">
-          <div>Скачать RFAD</div>
-          <div>Патч ноут</div>
-          <div>База Знаний</div>
+          <div><NuxtLink to="/download">Скачать RFAD</NuxtLink></div>
+          <div><NuxtLink :to="config.patchnote">Патч ноут</NuxtLink></div>
+          <div>
+            <NuxtLink :to="config.googleTableLink">База Знаний</NuxtLink>
+          </div>
         </div>
       </div>
 
@@ -38,9 +40,11 @@
           </div>
         </div>
         <div class="text-white text-opacity-50 font-medium">
-          <div>Telegram</div>
-          <div>Discord</div>
-          <div>ВКонтакте</div>
+          <div>
+            <NuxtLink as="div" :to="config.telegramLink">Telegram</NuxtLink>
+          </div>
+          <div><NuxtLink :to="config.discordLink">Discord</NuxtLink></div>
+          <div><NuxtLink :to="config.vkLink">ВКонтакте</NuxtLink></div>
         </div>
       </div>
     </div>
@@ -55,8 +59,8 @@
           </div>
         </div>
         <div class="text-white text-opacity-50 font-medium">
-          <div>Boosty</div>
-          <div>Patreon</div>
+          <div><NuxtLink :to="config.boostyLink">Boosty</NuxtLink></div>
+          <div><NuxtLink :to="config.patreonLink">Patreon</NuxtLink></div>
         </div>
       </div>
 
@@ -100,5 +104,14 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+a {
+  @apply transition-opacity duration-200;
+  &:hover {
+    @apply opacity-70;
+  }
+}
 </style>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import config from '~/config'
+</script>
