@@ -1,21 +1,41 @@
 <template>
-  <div>
-    <Html lang="ru" class="no-scrollbar">
-      <Head>
-        <Title>{{ title }}</Title>
-        <Meta property="og:title" :content="title" />
-        <Meta name="twitter:card" content="summary_large_image" />
-        <Meta name="theme-color" :content="themeColor" />
-        <Meta property="og:site_name" :content="brand" />
-        <Meta property="og:type" content="website" />
-
-        <Link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-      </Head>
-      <Body class="bg-black">
-        <slot />
-      </Body>
-    </Html>
-  </div>
+  <Html lang="ru" class="no-scrollbar">
+    <Head>
+      <Title>{{ title }}</Title>
+      <Meta name="description" content="RFAD SE - Новый взгляд на Skyrim." />
+      <Meta property="og:title" :content="title" />
+      <Meta
+        property="og:description"
+        content="RFAD SE - Новый взгляд на Skyrim."
+      />
+      <Meta name="twitter:card" content="summary_large_image" />
+      <Meta name="theme-color" :content="themeColor" />
+      <Meta property="og:site_name" :content="brand" />
+      <Meta property="og:type" content="website" />
+      <Meta name="viewport" content="width=device-width, initial-scale=1" />
+      <Meta name="robots" content="index, follow" />
+      <Link rel="canonical" href="https://skyrimrfad.com/" />
+      <Link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "RFAD SE",
+          "url": "https://skyrimrfad.com/",
+          "sameAs": [
+            "https://discord.gg/q2ygjdk8Gv",
+            "https://vk.com/rfad_se",
+            "https://t.me/rfad_se",
+            "https://boosty.to/skyrim_rfad_chicken",
+            "https://www.patreon.com/RFaD_ChickenEdition"
+          ]
+        }
+      </script>
+    </Head>
+    <Body class="bg-black">
+      <slot />
+    </Body>
+  </Html>
 </template>
 
 <script setup lang="ts">
