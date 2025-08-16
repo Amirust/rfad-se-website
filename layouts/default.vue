@@ -16,21 +16,8 @@
       <Meta name="robots" content="index, follow" />
       <Link rel="canonical" href="https://skyrimrfad.com/" />
       <Link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "RFAD SE",
-          "url": "https://skyrimrfad.com/",
-          "sameAs": [
-            "https://discord.gg/q2ygjdk8Gv",
-            "https://vk.com/rfad_se",
-            "https://t.me/rfad_se",
-            "https://boosty.to/skyrim_rfad_chicken",
-            "https://www.patreon.com/RFaD_ChickenEdition"
-          ]
-        }
-      </script>
+      <!-- eslint-disable-next-line -->
+      <component :is="'script'" v-html="ldjson" type="application/ld+json" />
     </Head>
     <Body class="bg-black">
       <slot />
@@ -45,6 +32,20 @@ const brand = 'RFAD SE'
 const title = `${brand} by Immersive Chicken`
 const themeColorBrowser = '#0D0C0A'
 const themeColorServer = '#0D0C0A'
+
+const ldjson = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'RFAD SE',
+  url: 'https://skyrimrfad.com/',
+  sameAs: [
+    'https://discord.gg/q2ygjdk8Gv',
+    'https://vk.com/rfad_se',
+    'https://t.me/rfad_se',
+    'https://boosty.to/skyrim_rfad_chicken',
+    'https://www.patreon.com/RFaD_ChickenEdition',
+  ],
+})
 
 const themeColor = computed(() => {
   return isBrowser() ? themeColorBrowser : themeColorServer
