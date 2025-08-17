@@ -26,7 +26,7 @@
           <Button to="/download">{{ t('common.download') }}</Button>
         </div>
       </div>
-      <div class="opacity-0">{{ t('common.marginNote') }}</div>
+      <span class="opacity-0">{{ t('common.marginNote') }}</span>
     </div>
 
     <div class="container mx-auto my-26 flex flex-col gap-8" id="features">

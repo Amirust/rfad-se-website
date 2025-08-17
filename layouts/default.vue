@@ -2,11 +2,14 @@
   <Html lang="ru" class="no-scrollbar">
     <Head>
       <Title>{{ title }}</Title>
-      <Meta name="description" content="RFAD SE - Новый взгляд на Skyrim." />
+      <Meta
+        name="description"
+        content="RFAD SE - передовая сборка Skyrim на базе Requiem с улучшенной графикой, новыми боссами и уникальными механиками. Скачать бесплатно."
+      />
       <Meta property="og:title" :content="title" />
       <Meta
         property="og:description"
-        content="RFAD SE - Новый взгляд на Skyrim."
+        content="RFAD SE - передовая сборка Skyrim на базе Requiem с улучшенной графикой, новыми боссами и уникальными механиками. Скачать бесплатно."
       />
       <Meta name="twitter:card" content="summary_large_image" />
       <Meta name="theme-color" :content="themeColor" />
@@ -16,6 +19,7 @@
       <Meta name="robots" content="index, follow" />
       <Link rel="canonical" href="https://skyrimrfad.com/" />
       <Link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+      <Link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
       <!-- eslint-disable-next-line -->
       <component :is="'script'" v-html="ldjson" type="application/ld+json" />
     </Head>
