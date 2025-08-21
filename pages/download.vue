@@ -19,7 +19,7 @@ enum Stage {
 }
 
 const activeStage: Ref<Stage> = ref(Stage.Download)
-const activeDownloadTab: Ref<'torrent' | 'google'> = ref('torrent')
+const activeDownloadTab: Ref<'torrent' | 'google' | 'yadisk'> = ref('torrent')
 
 const nextStage = () => {
   if (activeStage.value < Stage.Play) activeStage.value++
@@ -164,6 +164,17 @@ const setStage = (stage: Stage) => {
                 >
                   {{ t('download.tabs.google') }}
                 </div>
+                <div
+                  @click="activeDownloadTab = 'yadisk'"
+                  class="interactive"
+                  :class="{
+                    'border-b border-primary text-primary':
+                      activeDownloadTab === 'yadisk',
+                    'text-secondary': activeDownloadTab !== 'yadisk',
+                  }"
+                >
+                  {{ t('download.tabs.yadisk') }}
+                </div>
               </div>
             </div>
             <transition name="fade" mode="out-in">
@@ -176,6 +187,29 @@ const setStage = (stage: Stage) => {
                   <SmallButton :to="config.download.torrent">
                     <div class="flex flex-row gap-1.5 items-center">
                       <DownloadFile /> {{ t('download.actions.torrentFile') }}
+                    </div>
+                  </SmallButton>
+                  <SmallButton to="" @click="nextStage">
+                    <div class="flex flex-row gap-1.5 items-center">
+                      {{ t('common.next') }}
+                    </div>
+                  </SmallButton>
+                </div>
+              </div>
+              <div
+                v-else-if="activeDownloadTab === 'yadisk'"
+                class="text-secondary text-lg min-h-96"
+              >
+                <div v-html="t('download.sections.download.yadiskHtml')"></div>
+                <div class="mt-2 flex flex-row gap-2.5">
+                  <SmallButton :to="config.download.yadisk">
+                    <div class="flex flex-row gap-1.5 items-center">
+                      <DownloadFile /> {{ t('download.actions.yadisk') }}
+                    </div>
+                  </SmallButton>
+                  <SmallButton :to="config.download.exeFile">
+                    <div class="flex flex-row gap-1.5 items-center">
+                      <DownloadFile /> {{ t('download.actions.installer') }}
                     </div>
                   </SmallButton>
                   <SmallButton to="" @click="nextStage">

@@ -61,16 +61,18 @@ export default {
     tabs: {
       torrent: 'Torrent',
       google: 'Google Drive',
+      yadisk: 'Яндекс Диск',
     },
     sections: {
       download: {
         title: 'Скачаем сборку',
-        torrentHtml: `Скачайте <a class="bold text-block-inner-text" href="${config.download.torrent}">Torrent файл</a> установщика. Мы рекомендуем использовать <a href="${config.qbit}" class="bold text-block-inner-text">QBitTorrent</a> для скачиванния. <br /><br /> В установщике уже вшита игра Skyrim SE + сборка.<br /> <p class="bold text-block-inner-text">В УСТАНОВЩИКЕ УЖЕ ВШИТА ИГРА ВМЕСТЕ С СБОРКОЙ.</p> <br /> <p class="font-semibold">Системные требования</p> Для игры без ENB требуется GTX 1060 (6гб VRAM) либо эквивалент от AMD.<br /> Для игры с ENB требуется GTX 1660 либо Radeon 570 и выше.<br /> Как минимум 4-х ядерный процессор 3.5GHz.<br /> Минимум 8гб оперативной памяти.<br /> ~65гб места на диске. Рекомендуется ставить на SSD.`,
-        googleHtml: `Перейдите по <a class="bold text-block-inner-text" href="${config.download.googleLink}">ссылке</a>, там вы найдете 23 bin файла. Их все нужно скачать и поместить в отдельную папку.<br /> После того как вы это сделали, скачайте по <a class="bold text-block-inner-text" href="${config.download.exeFile}">этой ссылке</a> exe файл установщика и поместите его в эту же папку. <br /><br /> В установщике уже вшита игра Skyrim SE + сборка.<br /> <p class="bold text-block-inner-text">В УСТАНОВЩИКЕ УЖЕ ВШИТА ИГРА ВМЕСТЕ С СБОРКОЙ.</p> <br /> <p class="font-semibold">Системные требования</p> Для игры без ENB требуется GTX 1060 (6гб VRAM) либо эквивалент от AMD.<br /> Для игры с ENB требуется GTX 1660 либо Radeon 570 и выше.<br /> Как минимум 4-х ядерный процессор 3.5GHz.<br /> Минимум 8гб оперативной памяти.<br /> ~65гб места на диске. Рекомендуется ставить на SSD.`,
+        torrentHtml: `Скачайте <a class="bold text-block-inner-text" href="${config.download.torrent}">Torrent файл</a> установщика. Мы рекомендуем использовать <a href="${config.qbit}" class="bold text-block-inner-text">QBitTorrent</a> для скачиванния. <br /><br /> <p class="bold text-block-inner-text">В УСТАНОВЩИКЕ УЖЕ ВШИТА ИГРА ВМЕСТЕ С СБОРКОЙ.</p> <br /> <p class="font-semibold">Системные требования</p> Для игры без ENB требуется GTX 1060 (6гб VRAM) либо эквивалент от AMD.<br /> Для игры с ENB требуется GTX 1660 либо Radeon 570 и выше.<br /> Как минимум 4-х ядерный процессор 3.5GHz.<br /> Минимум 8гб оперативной памяти.<br /> ~65гб места на диске. Рекомендуется ставить на SSD.`,
+        googleHtml: `Перейдите по <a class="bold text-block-inner-text" href="${config.download.googleLink}">ссылке</a>, там вы найдете .bin файлы. Их все нужно скачать и поместить в отдельную папку.<br /> После того как вы это сделали, скачайте по <a class="bold text-block-inner-text" href="${config.download.exeFile}">этой ссылке</a> exe файл установщика и поместите его в эту же папку. <br /><br /> <p class="bold text-block-inner-text">В УСТАНОВЩИКЕ УЖЕ ВШИТА ИГРА ВМЕСТЕ С СБОРКОЙ.</p> <br /> <p class="font-semibold">Системные требования</p> Для игры без ENB требуется GTX 1060 (6гб VRAM) либо эквивалент от AMD.<br /> Для игры с ENB требуется GTX 1660 либо Radeon 570 и выше.<br /> Как минимум 4-х ядерный процессор 3.5GHz.<br /> Минимум 8гб оперативной памяти.<br /> ~65гб места на диске. Рекомендуется ставить на SSD.`,
+        yadiskHtml: `Перейдите по <a class="bold text-block-inner-text" href="${config.download.yadisk}">ссылке</a>, там вы найдете .bin файлы и .exe файл. Их все нужно скачать и поместить в отдельную папку.<br /><br /> <p class="bold text-block-inner-text">В УСТАНОВЩИКЕ УЖЕ ВШИТА ИГРА ВМЕСТЕ С СБОРКОЙ.</p> <br /> <p class="font-semibold">Системные требования</p> Для игры без ENB требуется GTX 1060 (6гб VRAM) либо эквивалент от AMD.<br /> Для игры с ENB требуется GTX 1660 либо Radeon 570 и выше.<br /> Как минимум 4-х ядерный процессор 3.5GHz.<br /> Минимум 8гб оперативной памяти.<br /> ~65гб места на диске. Рекомендуется ставить на SSD.`,
       },
       install: {
         title: 'Установим сборку',
-        html: 'После того как вы всё скачали, откройте установщик <span class="bold text-block-inner-text">RfaD SE 6.0.exe</span> и установите сборку.<br /><br /> <p class="font-semibold">ВАЖНО</p> 1. Я не знаю, что выбрать: ENB или ReShade<br /> Для игры с ReShade требуется GTX 1060 (6гб VRAM) либо эквивалент от AMD.<br /> Для игры с ENB требуется GTX 1660 либо Radeon 570 и выше.<br /> Если вы играете на ноутбуках, где видеокарта слабее чем RTX 3060M, рекомендуется выбрать ReShade.<br /> 2. Мы рекомендуем выбирать все Redist (.NET 6.0 и Microsoft Visual C++) чтобы избежать проблем с сборкой.',
+        html: 'После того как вы всё скачали, откройте установщик <span class="bold text-block-inner-text">RfaD SE 6.1.exe</span> и установите сборку.<br /><br /> <p class="font-semibold">ВАЖНО</p> 1. Я не знаю, что выбрать: ENB или ReShade<br /> Для игры с ReShade требуется GTX 1060 (6гб VRAM) либо эквивалент от AMD.<br /> Для игры с ENB требуется GTX 1660 либо Radeon 570 и выше.<br /> Если вы играете на ноутбуках, где видеокарта слабее чем RTX 3060M, рекомендуется выбрать ReShade.<br /> 2. Мы рекомендуем выбирать все Redist (.NET 6.0 и Microsoft Visual C++) чтобы избежать проблем с сборкой.',
       },
       update: {
         title: 'Обновим сборку',
@@ -84,6 +86,7 @@ export default {
     actions: {
       torrentFile: 'Torrent Файл',
       googleDrive: 'Google drive',
+      yadisk: 'Яндекс Диск',
       installer: 'Установщик',
     },
   },

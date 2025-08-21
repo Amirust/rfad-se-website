@@ -12,10 +12,11 @@ export default {
   download: {
     torrent:
       'https://drive.google.com/file/d/1fV6MKgxez6HqzhAlO-b6D65YbN_qpQIy/view?usp=sharing',
-    yadisk: 'https://disk.yandex.ru/d/SSobZdptpsWSrQ',
+    yadisk: 'https://disk.yandex.ru/d/S-hgGzIH_73y1w',
     googleLink:
-      'https://drive.google.com/drive/folders/1JUOctbsugh2IIEUCWcBkupXYVYoJMg4G',
-    exeFile: '',
+      'https://drive.google.com/drive/folders/1lopVjV4ci-sGdFaXgnjkm5OE7WzubUF1',
+    exeFile:
+      'https://github.com/Amirust/rfad-se/releases/download/6.1/RfaD.SE.6.1.exe',
   },
 
   qbit: 'https://www.qbittorrent.org/',
