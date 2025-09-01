@@ -16,7 +16,7 @@ export default {
     googleLink:
       'https://drive.google.com/drive/folders/1lopVjV4ci-sGdFaXgnjkm5OE7WzubUF1',
     exeFile:
-      'https://github.com/Amirust/rfad-se/releases/download/6.1/RfaD.SE.6.1.exe',
+      'https://raw.githubusercontent.com/Amirust/rfad-se/refs/heads/master/RfaD%20SE%206.1.exe',
   },
 
   qbit: 'https://www.qbittorrent.org/',
