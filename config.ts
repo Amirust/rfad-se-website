@@ -12,7 +12,7 @@ export default {
   download: {
     torrent:
       'https://drive.google.com/file/d/1fV6MKgxez6HqzhAlO-b6D65YbN_qpQIy/view?usp=sharing',
-    yadisk: 'https://disk.yandex.ru/d/S-hgGzIH_73y1w',
+    yadisk: 'https://disk.yandex.ru/d/3-eOXLniBg1WbA',
     googleLink:
       'https://drive.google.com/drive/folders/1lopVjV4ci-sGdFaXgnjkm5OE7WzubUF1',
     exeFile:
