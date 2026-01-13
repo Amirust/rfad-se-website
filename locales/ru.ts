@@ -72,7 +72,7 @@ export default {
       },
       install: {
         title: 'Установим сборку',
-        html: 'После того как вы всё скачали, откройте установщик <span class="bold text-block-inner-text">RfaD SE 6.1.exe</span> и установите сборку.<br /><br /> <p class="font-semibold">ВАЖНО</p> 1. Я не знаю, что выбрать: ENB или ReShade<br /> Для игры с ReShade требуется GTX 1060 (6гб VRAM) либо эквивалент от AMD.<br /> Для игры с ENB требуется GTX 1660 либо Radeon 570 и выше.<br /> Если вы играете на ноутбуках, где видеокарта слабее чем RTX 3060M, рекомендуется выбрать ReShade.<br /> 2. Мы рекомендуем выбирать все Redist (.NET 6.0 и Microsoft Visual C++) чтобы избежать проблем с сборкой.',
+        html: 'После того как вы всё скачали, откройте установщик <span class="bold text-block-inner-text">RfaD SE 6.2.exe</span> и установите сборку.<br /><br /> <p class="font-semibold">ВАЖНО</p> 1. Я не знаю, что выбрать: ENB или ReShade<br /> Для игры с ReShade требуется GTX 1060 (6гб VRAM) либо эквивалент от AMD.<br /> Для игры с ENB требуется GTX 1660 либо Radeon 570 и выше.<br /> Если вы играете на ноутбуках, где видеокарта слабее чем RTX 3060M, рекомендуется выбрать ReShade.<br /> 2. Мы рекомендуем выбирать все Redist (.NET 6.0 и Microsoft Visual C++) чтобы избежать проблем с сборкой.',
       },
       update: {
         title: 'Обновим сборку',
