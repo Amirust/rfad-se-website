@@ -14,7 +14,7 @@ export default {
       'https://drive.google.com/file/d/1fV6MKgxez6HqzhAlO-b6D65YbN_qpQIy/view?usp=sharing',
     yadisk: 'https://disk.yandex.ru/d/3-eOXLniBg1WbA',
     googleLink:
-      'https://drive.google.com/drive/folders/1lopVjV4ci-sGdFaXgnjkm5OE7WzubUF1',
+      'https://drive.google.com/drive/folders/1rQGON6B4RKIOkwvTKkv_lKGEVFrWAWbj?usp=sharing',
     exeFile:
       'https://raw.githubusercontent.com/Amirust/rfad-se/refs/heads/master/RfaD%20SE%206.2.exe',
   },
